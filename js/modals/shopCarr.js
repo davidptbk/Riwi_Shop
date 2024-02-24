@@ -10,12 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // local storage funcional.
     let carritoIds = JSON.parse(localStorage.getItem("carritoIds")) || [];
 
-    function vaciarContenido() {
-        let elemento = document.querySelector('.Contain-carrito');
-        elemento.innerHTML = '';
-    }
-    vaciarContenido();
-
     // pintar los identificadores en el local storage.
     carritoIds.forEach(id => {
         agregarIdentificador(id, clickCounters[id]);

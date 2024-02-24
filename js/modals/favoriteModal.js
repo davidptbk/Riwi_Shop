@@ -1,14 +1,8 @@
-import { CerrarModalFavorite } from "./modal"
-
 document.addEventListener("DOMContentLoaded", function () {
-    const ModalFavoriteList = document.querySelector(".corazon-but");
-    const AddToFavorite = document.querySelectorAll('.Contain-liked');
-    const ModalContentFavorite = document.querySelector(".");
-    const modalFavorite = document.querySelector('.liked');
+    const AddToFavorite = document.querySelectorAll('.like');
+    const modalFavorite = document.querySelector('.Contain-liked');
     const iconFavorite = document.querySelector("#favorite-js");
-    const titleModalFavorite = document.querySelector('#titleModalFavorite');
-    const image = document.createElement("img");
-    const efect = document.querySelector(".efect");
+    const titleModalFavorite = document.getElementById('titleModalFavorite');
 
     // local storage funcional
     let carritoFavs = JSON.parse(localStorage.getItem("carritoFavs")) || [];
@@ -16,13 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // pintar los identificadores en el local storage
     carritoFavs.forEach(id => {
         agregarIdentificadorFavorito(id);
-    });
-
-    // funcion para abrir y cerrar el modalFavorite
-    document.addEventListener("click", (event) => {
-        if (event.target === modalFavorite) {
-            CerrarModalFavorite();
-        }
     });
 
     // funcion para añadir algo a la lista de favoritos
@@ -109,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 identificador.appendChild(eliminarBoton);
 
                 // agregamos el dentificador al modalFavorite
-                ModalContentFavorite.appendChild(identificador);
+                modalFavorite.appendChild(identificador);
             }
 
         } else {
@@ -127,43 +114,11 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("carritoFavs", JSON.stringify(carritoFavs));
 
         // eliminamos el identificador del modalFavorite
-        const identificadorExistente = ModalContentFavorite.querySelector(`.identificador[data-id="${id}"]`);
+        const identificadorExistente = modalFavorite.querySelector(`.identificador[data-id="${id}"]`);
         if (identificadorExistente) {
-            ModalContentFavorite.removeChild(identificadorExistente);
+            modalFavorite.removeChild(identificadorExistente);
         }
     }
 
-    //funcion para añadir los botones al final del modalFavorite
-    function botonesCartYCheckOutFavorito() {
-        const hr = document.createElement('hr');
-        //botones que van despues de los identificadores
-        const botonCart = document.createElement("button");
-        botonCart.textContent = "Cart";
-        botonCart.id = "botonCart";
-        const botonCheckout = document.createElement("button");
-        botonCheckout.textContent = "CheckOut";
-        botonCheckout.id = "botonCheckOut";
-
-        //redirecciones para los botones
-        botonCheckout.addEventListener("click", () => {
-            window.location.href = "/redirects/paymentPage.html"
-        })
-        botonCart.addEventListener("click", () => {
-            window.location.href = "/redirects/Cart.html"
-        })
-
-        //crea un contenedor para los botones
-        const contenedorCartYCheckOut = document.createElement("div");
-        contenedorCartYCheckOut.className = "contenedorCartYCheckOut";
-
-        //agrega los botones al contenedor
-        contenedorCartYCheckOut.appendChild(botonCart);
-        contenedorCartYCheckOut.appendChild(botonCheckout);
-
-        //agrega el contenedor a ModalContentFavorite solo si no ha sido agregado antes
-        if (!ModalContentFavorite.querySelector("#botonCart")) {
-            ModalContentFavorite.appendChild(contenedorCartYCheckOut);
-        }
-    }
-    botonesCartYCheckOutFavorito();
 });
+
