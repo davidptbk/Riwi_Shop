@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
     // selectores
-    //const ModalShoppingCart = document.querySelector(".carrito");
     const AddToCart = document.querySelectorAll(".boton-opcion");
     const ModalContent = document.querySelector(".Contain-carrito");
     const titleModalKart = document.getElementById("titleModalKart");
@@ -60,10 +59,6 @@ document.addEventListener("DOMContentLoaded", function () {
             localStorage.setItem("clickCounters", JSON.stringify(clickCounters));
         });
     })
-
-
-
-
 
     // funcion para agregar un identificador al modal
     function agregarIdentificador(id, clickCount) {
