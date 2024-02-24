@@ -1,0 +1,75 @@
+.account{
+    width: 300px;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    right: 4%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    border-radius: 5px;
+   
+}
+
+    
+
+.Name-tag{
+    width: 99%;
+    height: 99%;
+    display: flex;
+    justify-content: center;
+}
+.Name-tag h4::after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left:12%;
+    width: 210px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.532);
+    display: block;
+}
+.op-Account{
+    width: 99%;
+    height: 40%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.inicio-RegistrerBut{
+    width: 160px;
+    border-radius: 20px;
+    position: absolute;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    left: 55px;
+    border: 2px solid var(--color3);
+}.inicio-RegistrerBut:hover{
+    background-color: var(--color3);
+    color: white;
+}
+
+
+
+.op-moreRegistrer{
+    width: 200px;
+    position: absolute;
+    left: 40px;
+    bottom: 10px;
+    text-align: center;
+}
+@media(max-width: 868px) {
+
+.account{
+    right: 30%;
+}
+    
+}
+.efect{
+    width: 99%;
+    height: auto;
+}

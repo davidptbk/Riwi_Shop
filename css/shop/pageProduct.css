@@ -1,0 +1,331 @@
+:root{
+    --shadow1 : 1px 2px 2px 1px rgba(0, 0, 0, 0.233);
+    --total :   black;
+    --font1:  'Poppins', sans-serif;
+    --hovers: rgb(192, 185, 255);
+    --color1:   #8d4494a6;
+    --color2: rgb(40, 50, 128);
+        --color3: #6B5CFF;
+    --color4: rgba(234, 162, 252, 0.582);
+    --color5:#DAD5FC;
+    --color6:aliceblue;
+    --color7:rgb(241,239,255);
+    }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+
+.nav-av{
+    width: 99%;
+    height: 70px;
+    background-color: rgba(40, 50, 128, 0.619);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 12px;
+    gap: 20px;
+}
+.nav-av a{
+color: #00000094;
+text-decoration: none;
+}
+.product{
+    padding: 40px;
+    width: 99%;
+    height: 700px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.angle-product{
+    width: 120px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+
+  
+}
+.angle{
+    width: 80px;
+    border: 1px solid rgba(0, 0, 0, 0.288);
+    height: 80px;
+    border-radius: 4px;
+    flex-wrap: nowrap;
+}
+.angle:hover{
+    transform: scale(1.1);
+}
+
+
+
+.producto-photo{
+    width: 500px;
+    height: 90%;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 4px;
+    flex-wrap: nowrap;
+    border-radius: 12px;
+
+
+
+}
+.producto-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 12px;
+}
+
+.size-but{
+    margin-top: 20px;
+}.size-but p{
+    color: rgba(0, 0, 0, 0.486);
+}
+.size-but button{
+    width: 40px;
+
+    padding: 10px;
+    border-radius: 5px;
+}.size-but button:hover{
+    transform: scale(1.1);
+}
+
+.talla-default{
+    background-color: rgb(221, 154, 66);
+    color: white;
+}
+
+.product-inforr{
+    width: 60%;
+    height: 90%;
+    padding: 40px;
+}
+.product-inforr h1{
+    font-size: calc(1em + 1vw);
+}
+.product-inforr p{
+    font-size: calc(0.1em + 1vw);
+}
+
+.product-inforr button{
+    border: none;
+}
+.addcart{
+padding: 20px;
+background-color: var(--color3);
+color: white;
+border-radius: 3px;
+}
+.buBut{
+    padding: 20px;
+    background-color: var(--color2);
+    color: white;
+    border-radius: 3px;
+}.but-ompra button{
+    padding: 23px;
+    width: 200px;
+    border-radius: 12px;
+    border: 1px solid;
+}.but-ompra button:hover{
+    background-color:var(--color2);
+    color: white;
+}
+
+
+
+
+.boton-buy{
+    border: none;
+    background-color: var(--color3);
+    color: white;
+}
+
+.minus{
+    height: 40px;
+    width: 40px;
+    font-size: 2em;
+    border-radius: 100%;
+}.more{
+    height: 40px;
+    width: 40px;
+    font-size: 2em;
+    border-radius: 100%;
+}
+.cantidad button{
+    background-color: white; 
+    transition: 1s ease-in-out;
+}
+.cantidad button:hover{
+    border:  0.8px solid rgb(214, 214, 214);
+}
+.cantidad button:active{
+   transform: scale(1.3);
+}
+
+
+input{
+    height: 50px;
+    width: 120px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+
+
+.stars-icon{
+    width: 130px;
+    height: auto;
+}
+.stars-icon span{
+    color: rgb(255, 217, 2);
+}
+.colors{
+    width: 130px;
+    height: auto;
+    margin-top: 20px;
+
+}.colors p{
+    color: rgba(0, 0, 0, 0.411);
+}
+
+.colors button{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+}.colorb1{
+    background-color: black;
+}.colorb2{
+    background-color: rgb(125, 25, 255);
+}.colorb3{
+    background-color: rgb(255, 251, 0);
+}
+.colors button:hover{
+    border: 1px solid;
+}
+
+.more-option{
+    flex-wrap: wrap;
+    width: 99%;
+    padding-left: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+.link-nva{
+    width: 99%;
+    height: 140px;
+    color: rgba(0, 0, 0, 0.568);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+}
+.hr-sep{
+    width: 56%;
+    position: absolute;
+    right: 20px;
+}
+
+.share{
+    display: flex;
+    width: 200px;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 60px;
+}
+.Descripcion{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+
+}
+.buts-features{
+    width: 99%;
+    display: flex;
+    justify-content:space-evenly;
+    gap: 20px;
+}
+.related-productos{
+    height: 30vh;
+}
+.title-sec{
+    width: 100%;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+
+@media (max-width: 868px) {
+    .product{
+        display: flex;
+        height: auto;
+        flex-wrap: wrap;
+        margin: 0;
+        padding-top: 0;
+        padding: 0;
+    }
+
+    .angle-product{
+        padding-top: 0;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+
+    .producto-photo{
+        width: 80%;
+        height: 40%;
+    }
+    .product-inforr{
+        width: 100%;
+    }
+    .product-inforr h1{
+        font-size: calc(2em + 1vw);
+    }
+    .product-inforr .precio{
+        font-size: calc(1em + 1vw);
+    }
+    .descripcion-product{
+        font-size: calc(5em + 2vw);
+    }
+    .link-nva{
+        display: flex;
+        align-items: start;
+        width: 99%;
+        padding: 20px;
+        padding-left: 20px;
+        justify-content: start;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .share{
+        margin-left: 0;
+    }
+    .hr-sep{
+        width: 90%;
+    }
+    .more-option{
+        justify-content: start;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+}

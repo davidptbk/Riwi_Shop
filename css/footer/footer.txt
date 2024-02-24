@@ -1,0 +1,30 @@
+<footer>
+    <section class="logo-and-info">
+        <div class="part-1">
+            <div class="logo"> <img src="./media/ass-v1/logos/Fondo-claro-logo.png"></div>
+            <div class="info"> cl. 16 #55-129,<br>Centro Comercial de Moda Outlet. Piso 3</div>
+        </div>
+        <div class="part-2">
+            <h2>Company</h2>
+            <a href="">About us</a>
+            <a href="">Contact</a>
+        </div>
+        <div class="part-2">
+            <h2>Oferta</h2>
+            <a href="https://riwi.io/curso/">Curso Desarrollo</a>
+            <a
+                href="https://api.whatsapp.com/send/?phone=573017325327&text=%C2%A1Hola%21+Quisiera+saber+m%C3%A1s+sobre+Riwi.&type=phone_number&app_absent=0">Solicitud</a>
+            <a href="">Products</a>
+        </div>
+        <div class="part-2">
+            <h2>Conexion</h2>
+            <a href="">Curso Desarrollo</a>
+            <a href="">Solicitud</a>
+            <a href="redirects/faqs.html">faqs</a>
+        </div>
+        </div>
+    </section>
+</footer>
+</div>
+
+<!------foooter-->

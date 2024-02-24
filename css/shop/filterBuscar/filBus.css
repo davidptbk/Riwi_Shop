@@ -1,0 +1,64 @@
+
+
+#filter-categories{
+    font-family: "Poppins", sans-serif;
+    display: none;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 170% !important;
+    text-align: center;
+    cursor: pointer;
+    color: black;
+    margin-left: 30px;
+}
+
+#filter-categories hr{
+    background-color: black;
+    background: black;
+    color: black;
+}
+
+#filter-categories option{
+    font-weight: 600;
+}
+
+#filter-categories option:hover{
+    background-color: lightgray;
+}
+
+.productos-contains{
+    padding-top: 130px !important; 
+}
+
+.icon-met{
+    position: absolute;
+    left: 1.5%;
+}
+
+.divMet-2{
+    margin-bottom: 35px;
+}
+
+.busqueda-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#campo-busqueda {
+    width: 300px;
+    padding: 10px 10px 10px 40px;
+    border: 2px solid #ccc;
+    border-radius: 18px;
+    font-size: 16px;
+    background-color: #fff;
+    background-image: url('../../../media/ass-v1/public/img-buscador.png'); 
+    background-position: 10px 6px;
+    background-repeat: no-repeat;
+}
+
+#campo-busqueda:focus {
+    border-color: #6B5CFF;
+    outline: none;
+    box-shadow: 0 0 5px rgb(40, 50, 128);;
+}

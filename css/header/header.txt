@@ -1,0 +1,41 @@
+<!------Cabecera-->
+<header class="head-v-top">
+    <section class="contains-v-top">
+        <a href="./LandingPage.html" class="logo-up-1"> <img src="media/ass-v1/logos/logo2.png"></a>
+        <div class="cpmtains-aC">
+            <div class="Men-AS">
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" id="menu-icon">&#9776;</label>
+                <div id="menu">
+                    <ul>
+                        <li><a href="../LandingPage.html">Home</a></li>
+                        <li><a href="./redirects/shop.html">Shop</a></li>
+                        <li><a href="./redirects/aboutProducts.html">About</a></li>
+                        <li><a href="./redirects/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="Meta-aRF">
+                <a href="../LandingPage.html">Home</a>
+                <a href="./redirects/shop.html">Shop</a>
+                <a href="./redirects/aboutProducts.html">About</a>
+                <a href="./redirects/contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="icons-top1">
+            <div class="login-but btn-1">
+                <span class="material-symbols-outlined" id="account-js">person</span>
+            </div>
+            <div class="corazon-but btn-1">
+                <span class="material-symbols-outlined" id="favorite-js">favorite</span>
+            </div>
+            <div class="shop-bur btn-1">
+                <span class="material-symbols-outlined" id="shopping-js">shopping_cart</span>
+            </div>
+        </div>
+    </section>
+</header>
+<!------Cabecera-->
+<!------Cabecera-->
+<!------Cabecera-->
+<!------Cabecera-->

@@ -1,0 +1,161 @@
+:root {
+    --shadow1: 1px 2px 2px 1px rgba(0, 0, 0, 0.233);
+    --total: black;
+    --font1: 'Poppins', sans-serif;
+    --hovers: rgb(192, 185, 255);
+    --color1: #8d4494a6;
+    --color2: rgb(40, 50, 128);
+    --color3: #6B5CFF;
+    --color4: rgba(234, 162, 252, 0.582);
+    --color5: #DAD5FC;
+    --color6: aliceblue;
+    --color7: rgb(241, 239, 255);
+}
+
+body {
+    text-align: center;
+    overflow-x: hidden;
+    flex-direction: column;
+    align-items: center; 
+    height: 100%;
+    width: 100%;
+    font-family: var(--font1) !important;
+}
+
+.container-principal-c {
+    display: flex;
+    width: 100%; 
+    justify-content: space-around;
+}
+
+.info-container-c {
+    width: 45%;
+    padding-top: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.info-container-c .info-content-c {
+    width: 90%;
+}
+
+.info-container-c .info-content-c .imgs-contact {
+    width: 30%;
+}
+
+
+.informacion-c {
+    display: flex !important;
+    padding-left: 35%;
+    padding-top: 20px;
+}
+
+.resto-de-info-c{
+    text-align: left;
+}
+
+.imgs-c{
+    width: 25%;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.form-container-c {
+    width: 55%;
+    padding-top: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-content-c {
+    width: 90%;
+}
+
+.form-info-c {
+    padding-top: 20px;
+    text-align: left !important;
+    padding-left: 30%;
+}
+
+
+input{
+    
+    border: 2px solid;
+    border-radius: 10px;
+    width: 73%;
+    height: 40px;
+    border-color: #6b5cff;
+    font-weight: 600;
+    padding-left: 10px;
+}
+
+textarea{
+    border: 2px solid;
+    border-color: #6b5cff;
+    border-radius: 10px;
+    font-weight: 600;
+    padding-left: 10px;
+    padding-top: 4px;
+}
+
+::placeholder{
+    font-weight: 600;
+}
+
+#btn-submit {
+    width: 74%;
+    height: 35px;
+    border-radius: 4px;
+    background-color: #6b5cff;
+    color: white;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.div-btn-sub{
+    padding-top: 20px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container-principal-c {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-container-c, .form-container-c {
+        width: 90%;
+        padding-top: 1%;
+    }
+
+    .informacion-c {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+
+    .form-info-c {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    input, #btn-submit, textarea {
+        width: 90%;
+    }
+
+    .imgs-contact {
+        width: 100%;
+        height: auto;
+    }
+
+    h1, h2, p {
+        font-size: 2vw;
+    }
+}
+
+
+

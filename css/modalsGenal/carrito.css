@@ -1,0 +1,291 @@
+:root {
+    --shadow1: 1px 2px 2px 1px rgba(0, 0, 0, 0.233);
+    --total: black;
+    --font1: 'Poppins', sans-serif;
+    --hovers: rgb(107, 92, 255);
+    --color4: #6B5CFF;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+.carrito {
+    width: 400px;
+    height: 60%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    right: 1%;
+    z-index: 10;
+    flex-direction: column;
+    display: none;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 2px 0px 10px 2px rgba(0, 0, 0, 0.096);
+}
+
+/* .Name-carrito {
+    width: 99%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 12px;
+    font-size: calc(.2em + 1vw);
+    font-weight: bolder;
+} */
+
+
+
+#titleModalKart {
+    display: flex;
+    padding-top: 12px;
+    font-size: calc(.2em +1vw);
+    font-weight: bolder;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.Contain-carrito {
+    display: flex;
+    width: 99%;
+    height: 60%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    justify-content: start;
+    flex-direction: column;
+
+}
+.Contain-carrito::-webkit-scrollbar{
+    width: 12px;
+}
+
+.Contain-carrito::-webkit-scrollbar-thumb{
+    background-color: #6B5CFF;
+    border-radius: 5px;
+}
+.Contain-carrito::-webkit-scrollbar-track{
+    background-color: rgba(255, 255, 255, 0)
+}
+
+
+
+
+
+
+.identificador {
+    width: 90%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    z-index: 1s;
+}
+
+
+
+
+
+
+
+
+
+.identificador p {
+    margin: 0;
+    text-align: start;
+    justify-self: right;
+    letter-spacing: 0.5px;
+}
+
+.sep {
+    width: 80%;
+}
+
+
+.info-compra {
+    font-weight: bolder;
+    line-height: 2;
+    text-align: start;
+}
+
+.precioYcontador {
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.precioYcontador span {
+    float: left;
+    text-align: left;
+}
+
+
+
+.card-carrito {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.imageProducto {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.identificador img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* .subtotal {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    background-color: gray;
+} */
+
+.subtotal {
+    border-top: 0.2px solid rgba(0, 0, 0, 0.067);
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+}
+
+.subtotal a {
+    text-decoration: none;
+}
+
+.palabra-subtotal {
+    font-size: 18px;
+    width: 160px;
+    display: flex;
+    padding: 10px;
+    justify-content: flex-start !important;
+}
+
+.precio-subotal {
+    font-size: 18px;
+    width: 160px;
+    height: auto;
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+}
+
+.botones-carrito {
+    border-top: 0.px solid rgba(0, 0, 0, 0.071);
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.botones-carrito a {
+    text-decoration: none;
+}
+
+.botonsCart {
+    width: 160px;
+    border-radius: 20px;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    left: 55px;
+    border: 2px solid var(--color3);
+}
+
+.botonsCart:hover {
+    background-color: var(--color3);
+    color: white;
+}
+
+#botonCart,
+#botonCheckOut {
+    display: inline-block;
+    border-radius: 20px;
+    padding: 10px;
+    justify-content: center;
+    border: 2px solid var(--color3);
+}
+
+
+#botonCart:hover,
+#botonCheckOut:hover {
+    background-color: var(--color3);
+    color: white;
+}
+
+
+.contenedorCartYCheckOut {
+    position: absolute;
+    margin: 0px;
+    width: 100% !important;
+    justify-content: center;
+    display: flex;
+    bottom: 0;
+    /* left: 0; */
+    padding: 10px;
+}
+
+
+#trash:hover {
+    transition: 0.3s;
+    margin-bottom: 10px;
+}
+
+
+#titleModalKart,
+#IconBagShopping {
+    display: flex!important;
+}
+
+#IconBagShopping {
+    float: inline-end !important;
+
+}
+
+#IconBagShopping {
+    text-align: right;
+}
+
+.eliminar {
+    cursor: pointer;
+}
+
+
+.bxs-x-circle {
+    font-size: 1.5rem;
+    color: #181E4B;
+}
+
+.bxs-x-circle:hover {
+    color: red;
+}
+
+@media (max-width: 868px) {
+
+    .carrito {
+        right: 20%;
+    }
+
+}
