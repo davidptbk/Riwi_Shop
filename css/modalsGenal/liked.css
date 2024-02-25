@@ -32,15 +32,32 @@
     padding-top: 12px;
     font-size: calc(.2em + 1vw);
     font-weight: bolder;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .Contain-liked {
-    width: 99%;
+    width: 85%;
     height: 75%;
-    overflow-y: auto;
+    overflow-y: scroll !important;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
+}
+
+.Contain-liked::-webkit-scrollbar {
+    width: 12px;
+}
+
+.Contain-liked::-webkit-scrollbar-thumb {
+    background-color: #6B5CFF;
+    border-radius: 5px;
+}
+
+.Contain-liked::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0) !important
 }
 
 .botones-liked {
@@ -72,6 +89,7 @@
 .botonsCart:hover {
     background-color: var(--color3);
     color: white;
+    cursor: pointer;
 }
 
 @media (max-width: 868px) {

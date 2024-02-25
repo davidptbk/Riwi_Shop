@@ -51,9 +51,7 @@
     height: 60%;
     overflow-y: scroll;
     overflow-x: hidden;
-    justify-content: start;
     flex-direction: column;
-
 }
 
 .Contain-carrito::-webkit-scrollbar {
