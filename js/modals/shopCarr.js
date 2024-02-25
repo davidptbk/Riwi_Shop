@@ -110,6 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Crea el precio del producto
         const precioParrafo = document.createElement("p");
         precioParrafo.textContent = producto.precio;
+        precioParrafo.classList.add("precioParrafo")
 
         // Crea el contenedor para el precio y el contador
         const precioYcontador = document.createElement("div");
