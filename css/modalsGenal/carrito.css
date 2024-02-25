@@ -10,7 +10,7 @@
 
 .carrito {
     width: 400px;
-    height: 60%;
+    height: 70%;
     background-color: rgb(255, 255, 255);
     position: absolute;
     right: 1%;
@@ -47,29 +47,25 @@
 
 .Contain-carrito {
     display: flex;
-    width: 99%;
+    width: 85%;
     height: 60%;
     overflow-y: scroll;
     overflow-x: hidden;
-    justify-content: start;
     flex-direction: column;
-
 }
-.Contain-carrito::-webkit-scrollbar{
+
+.Contain-carrito::-webkit-scrollbar {
     width: 12px;
 }
 
-.Contain-carrito::-webkit-scrollbar-thumb{
+.Contain-carrito::-webkit-scrollbar-thumb {
     background-color: #6B5CFF;
     border-radius: 5px;
 }
-.Contain-carrito::-webkit-scrollbar-track{
+
+.Contain-carrito::-webkit-scrollbar-track {
     background-color: rgba(255, 255, 255, 0)
 }
-
-
-
-
 
 
 .identificador {
@@ -81,14 +77,6 @@
     margin-bottom: 5px;
     z-index: 1s;
 }
-
-
-
-
-
-
-
-
 
 .identificador p {
     margin: 0;
@@ -256,7 +244,7 @@
 
 #titleModalKart,
 #IconBagShopping {
-    display: flex!important;
+    display: flex !important;
 }
 
 #IconBagShopping {
