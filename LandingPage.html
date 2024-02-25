@@ -42,15 +42,16 @@
                 </div>
             </div>
             <div class="Meta-aRF">
-                <a href="../LandingPage.html">Home</a>
-                <a href="./redirects/shopRiwi/shop.html">Shop</a>
-                <a href="./redirects/contact/AboutUs.html">About</a>
-                <a href="./redirects/contact/contact.html">Contact</a>
+                <a href="../LandingPage.html" class="link1Home">Home</a>
+                <a href="./redirects/shopRiwi/shop.html" class="link1Shop">Shop</a>
+                <a href="./redirects/contact/AboutUs.html"  class="link1about">About</a>
+                <a href="./redirects/contact/contact.html" class="link1acontact">Contact</a>
             </div>
         </div>
         <div class="icons-top1">
             <div class="login-but btn-1">
                 <span class="material-symbols-outlined" id="account-js">person</span>
+                <p id="idiomaStatus">en</p>
             </div>
             <div class="corazon-but btn-1">
                 <span class="material-symbols-outlined" id="favorite-js">favorite</span>
@@ -77,8 +78,13 @@
         <div class="op-moreRegistrer">
             <p>or <a href="./redirects/login.html">Sing Up</a>
             </p>
-        </div>
-    </div>
+            <select id="languageSelector">
+                <option   value="es" id="esVal">Español</option>
+                <option  value="en" id="enVal" selected class="active">English</option>
+            </select>
+        </div>  
+        
+    </div>  
 </section>
 <!------carrito-->
 <section class="carrito">
@@ -124,16 +130,19 @@
             </div>
             <div class="categoriesBot-1">
                 <div class="ct-1 redon-but-cat">
-                    <p>Mobile</p>
+                    <p class="toy">toys</p>
                 </div>
                 <div class="ct-1 redon-but-cat">
-                    <p>Clothes</p>
+                    <p class="cloch">clothes</p>
+
                 </div>
                 <div class="ct-1 redon-but-cat">
-                    <p>Thermos</p>
+                    <p class="term">term</p>
+                    
                 </div>
                 <div class="ct-1 redon-but-cat">
-                    <p>Key rings</p>
+                    <p class="keyn">keychains</p>
+                    
                 </div>
             </div>
         </section>
@@ -256,7 +265,7 @@
         <section class="carrucel23">
 
             <div class="logan-text">
-                <h2>50+ Best products the <br>Riwi </h2>
+                <h2 >50+ Best products the <br>riwi </h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores inventore sunt esse </p>
                 <div class="redig-2">
                     <a href="./redirects/shopRiwi/shop.html"> <button class="bt-more classBuv3">Explore
@@ -331,6 +340,9 @@
 <script src="./js/modals/modal.js" type="module"></script>
 <script src="./js/modals/shopCarr.js" type="module"></script>
 <script src="./js/modals/favoriteModal.js" type="module"></script>
+
+<!--Translate--->
+<script src="./js/translate/changeLaguage.js"></script>
 <!------foooter-->
 
 </html>
