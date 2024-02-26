@@ -43,13 +43,13 @@ function updateSlider() {
     });
 }
 
-function nextSlide() {
+window.nextSlide = function() {
     currentSlide = (currentSlide + 1) % totalSlides;
     updateSlider();
 }
 setInterval(nextSlide, 5000);
 
-function prevSlide() {
+window.prevSlide = function() {
     currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
     updateSlider();
 }
