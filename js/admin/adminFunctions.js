@@ -8,6 +8,8 @@ export function infoModalCategory(contenedor){
     cleanInformation(contenedor);
     contenedor.innerHTML = `
     <form>
+        <h1>Categories</h1>
+        <label for="Details">Details</label><br>
         <input type="text" id="idCategory"><br>
         <!-- Input for Category name -->
         <label for="name">Category name:</label><br>
@@ -15,6 +17,7 @@ export function infoModalCategory(contenedor){
         <!-- Buttons -->
         <button type="submit" >Submit</button>
         <button type="button" >Edit</button>
+        <button type="button" class="BynClose">Close</button>
     </form>
     `
 }

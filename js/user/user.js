@@ -58,7 +58,7 @@ function showProfile() {
   <div class="left">
       <div class="foto-users">
           <div class="foto">
-              <img src="../media/figma/prc.png" alt="Logo" class="img-left">
+              <img src="../../media/Assets 1 (Esenciales)/logos (Marca)/Pato.png" alt="Logo" class="img-left">
           </div>
           <label for="name" id ="name-label">Name:</label>
           <input type="text" value="Simon" readonly id="name">

@@ -7,8 +7,11 @@ import {URL_Products} from "../utilities/API/URLs.js";
 //Selectors
 const menuOption = document.querySelector(".links");
 const information = document.querySelector(".information");
-const containerModal = document.querySelector(".container-modal")
+const containerModal = document.querySelector(".container-modal");
+const cajamodal = document.querySelector(".set")
 
+//caja Completa del modal
+const modalactivate = document.querySelector(".OpenModal");
 
 //General Events
 document.addEventListener("DOMContentLoaded", function () {
@@ -23,6 +26,25 @@ document.addEventListener("DOMContentLoaded", function () {
     productManager();
   }
 });
+
+information.addEventListener('click',(event)=>{
+
+  const verified = event.target.classList.contains('OpenModal');
+  if (verified == true) {
+    cajamodal.style.display = "flex";
+   }else{
+     cajamodal.style.display = "none";
+   }
+  })
+
+  containerModal.addEventListener('click',(event)=>{
+
+    const verified = event.target.classList.contains('BynClose');
+    if (verified == true) {
+        cajamodal.style.display = "none";
+     }
+    })
+
 
 information.addEventListener("click", (e) => {
   e.preventDefault();
@@ -92,32 +114,49 @@ function categoryManager(){
   cleanInformation(information);
 
   information.innerHTML = `
-  <div class = "">
+  <div class = "botonsTable">
   
-    <button id = "addCategory"> Add Category</button>
-    <button id = "searchCategory"> Search Category</button>
+    <button id = "addCategory"  class="OpenModal"> Add Category</button>
+    <button id = "searchCategory" class="OpenModal"> Search Category</button>
 
   </div>
 
-  <table>
-  <tr>
+  <table class = "CategorieTable" border ="1"> 
+
+  <tr class = "InfoTableCategories">
       <th>Actions</th>
       <th>ID</th>
       <th>Name Category</th>
       <th>Details</th>
+      <th></th>
   </tr>
-
-  <tr>
-      <th>
+  
+  <tr class="DataTableCategories">
+      <th class="ActionsTable">
           <button>edit</button>
-          <button>delete</button>
+          <button class="DAngerBut">delete</button>
       </th>
-
+      
       <th>1</th>
       <th>123456</th>
       <th>Jose</th>
-      <th>Perez</th>
+      
       <th> <a href="#">see more ></a></th>
+
+  </tr>
+
+  <tr class="DataTableCategories">
+      <th class="ActionsTable">
+          <button>edit</button>
+          <button class="DAngerBut">delete</button>
+      </th>
+      
+      <th>2</th>
+      <th>Peluches</th>
+      <th>Los peluches</th>
+      
+      <th> <a href="#">see more ></a></th>
+
   </tr>
 
 </table>
@@ -132,15 +171,16 @@ async function productManager() {
   cleanInformation(information);
   localStorage.setItem("view", "product")
   information.innerHTML = `
-  <div class = "">
+  <div class = "botonsTable">
   
-    <button id = "addProducts"> Add Products</button>
-    <button id = "searchProducts"> Search Products</button>
+    <button id = "addProducts" class="OpenModal"> Add Products</button>
+    <button id = "searchProducts" class="OpenModal"> Search Products</button>
 
   </div>
 
-  <table>
-  <tr>
+  <table class = "CategorieTable" border ="1" >
+
+  <tr class = "InfoTableCategories">
       <th>Actions</th>
       <th>ID</th>
       <th>Product Name </th>
@@ -155,8 +195,8 @@ async function productManager() {
   console.log(products);
   products.forEach(product => {
     information.querySelector("table").innerHTML += `
-    <tr>
-        <th>
+    <tr class="DataTableCategories">
+        <th class="ActionsTable">
             <button class= "edit">edit</button>
             <button class= "delete">delete</button>
         </th>
@@ -200,15 +240,15 @@ function userManager() {
   cleanInformation(information);
   localStorage.setItem("view", "user")
   information.innerHTML = `
-  <div class = "">
+  <div class = "botonsTable">
   
-    <button id = "addUser"> Add Users</button>
-    <button id = "searchUser"> Search Users</button>
+    <button id = "addUser" class="OpenModal"> Add Users</button>
+    <button id = "searchUser" class="OpenModal"> Search Users</button>
 
   </div>
 
-  <table>
-    <tr>
+  <table class = "CategorieTable" border ="1" >
+    <tr  class = "InfoTableCategories">
         <th>Actions</th>
         <th>ID</th>
         <th>Document</th>
@@ -216,10 +256,10 @@ function userManager() {
         <th>Lastnames</th>
         <th>Details</th>
     </tr>
-    <tr>
-        <th>
+    <tr class="DataTableCategories">
+        <th class="ActionsTable">
             <button>edit</button>
-            <button>delete</button>
+            <button class="DAngerBut">delete</button>
         </th>
 
         <th>1</th>
@@ -240,15 +280,15 @@ function salesManager() {
   cleanInformation(information);
 
   information.innerHTML = `
-  <div class = "">
+  <div class = "botonsTable">
   
-    <button id = "addSales"> Add Sales</button>
-    <button id = "searchSales"> Search Sales </button>
+    <button id = "addSales" class="OpenModal"> Add Sales</button>
+    <button id = "searchSales" class="OpenModal"> Search Sales </button>
 
   </div>
 
-  <table>
-  <tr>
+  <table class = "CategorieTable" border ="1" >
+  <tr class = "InfoTableCategories">
       <th>Actions</th>
       <th>ID</th>
       <th>Document</th>
@@ -256,8 +296,8 @@ function salesManager() {
       <th>Lastnames</th>
       <th>Details</th>
   </tr>
-  <tr>
-      <th>
+  <tr class="DataTableCategories">
+      <th class="ActionsTable">
           <button>edit</button>
           <button>delete</button>
       </th>
