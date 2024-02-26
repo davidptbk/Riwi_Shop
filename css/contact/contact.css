@@ -42,7 +42,7 @@ body {
 }
 
 .info-container-c .info-content-c .imgs-contact {
-    width: 30%;
+    width: 37%;
 }
 
 
@@ -58,7 +58,7 @@ body {
 
 .imgs-c{
     margin-top: 6%;
-    width: 33%;
+    width: 33% !important;
     text-align: right;
     padding-right: 10px;
 }
@@ -121,20 +121,33 @@ textarea{
     padding-top: 20px;
 }
 
+#img-horario{
+    margin-right: -4% !important;
+    width: 44%;
+}
+
+#img-phone{
+    margin-top: -6% !important;
+}
+
 
 @media screen and (max-width: 768px) {
     .container-principal-c {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
     }
 
-    .info-container-c, .form-container-c {
+    .form-container-c {
         width: 90%;
         padding-top: 1%;
     }
 
+    .info-container-c{
+        width: 90%;
+        padding: 4%;
+    }
+
     .informacion-c {
-        flex-direction: column;
         align-items: center;
         padding-left: 0;
     }
@@ -148,9 +161,19 @@ textarea{
         width: 90%;
     }
 
-    .imgs-contact {
-        width: 100%;
-        height: auto;
+    .imgs-c{
+        margin-bottom: 14%;
+        width: 27% !important;
+        text-align: right !important;
+        padding-right: 2px !important;
+    }
+
+    #img-phone{
+        margin-bottom: -27.5% !important;
+    }
+
+    #img-horario{
+        margin-bottom: -27.5% !important;
     }
 
     h1, h2, p {
