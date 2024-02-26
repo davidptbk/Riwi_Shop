@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../css/header/header.css">
     <link rel="stylesheet" href="../../css/footer/footer.css">
     <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> 
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
      <!------Links modals-->
     <link rel="stylesheet" href="../../css/modalsGenal/account.css">
     <link rel="stylesheet" href="../../css/modalsGenal/carrito.css">
@@ -89,7 +90,7 @@
 </section>
 <!------carrito-->
 <section class="liked">
-  <div class="Name-liked">My likes</div>
+  <p id="titleModalFavorite">My likes</p>
   <hr class="sep">
   <div class="Contain-liked"></div>
   <div class="botones-liked">
@@ -100,7 +101,7 @@
 <div class="efect">
     <!------Estructura base-->
     <div class="Navegator-text">
-      <img src="../../media/public (Imagenes no permanentes)/Rectangle 1.png" />
+      <img src="../../media/Assets 2 (package)/fondosPages/RIWI.ESPACIOShop.jpg" />
       <div class="tex-fot">
         <h1>Shop</h1>
         <div class="met-links">
@@ -147,7 +148,7 @@
     <section class="productos">
       <div class="productos-contains">
         <!------esta es la card va desde aca-->
-        <div class="card">
+        <div class="card" data-id="1">
           <div class="content-image">
             <img
               src="../../media/public (Imagenes no permanentes)/Imagen de WhatsApp 2024-02-03 a las 09.41.04_95607ec0.jpg"
@@ -169,7 +170,7 @@
                 >Redimir</a
               >
               <a href="#" class="link-opcion"
-                ><span class="material-symbols-outlined">favorite</span>Like</a
+                ><span class="material-symbols-outlined like">favorite</span>Like</a
               >
             </div>
             <button class="boton-opcion">Add to cart</button>
@@ -179,7 +180,7 @@
         <!------Hasta aca  -->
         <!------Hasta aca  -->
 
-        <div class="card">
+        <div class="card" data-id="2">
           <div class="content-image">
             <img
               src="../../media/public (Imagenes no permanentes)/Imagen de WhatsApp 2024-02-03 a las 10.21.11_e1df0c0e.jpg"
@@ -201,13 +202,13 @@
                 >Redimir</a
               >
               <a href="#" class="link-opcion"
-                ><span class="material-symbols-outlined">favorite</span>Like</a
+                ><span class="material-symbols-outlined like">favorite</span>Like</a
               >
             </div>
             <button class="boton-opcion">Add to cart</button>
           </div>
         </div>
-        <div class="card">
+        <div class="card" data-id="3">
           <div class="content-image">
             <img
               src="../../media/public (Imagenes no permanentes)/Imagen de WhatsApp 2024-02-03 a las 09.41.04_95607ec0.jpg"
@@ -229,13 +230,13 @@
                 >Redimir</a
               >
               <a href="#" class="link-opcion"
-                ><span class="material-symbols-outlined">favorite</span>Like</a
+                ><span class="material-symbols-outlined like">favorite</span>Like</a
               >
             </div>
             <button class="boton-opcion">Add to cart</button>
           </div>
         </div>
-        <div class="card">
+        <div class="card" data-id="4">
           <div class="content-image">
             <img
               src="../../media/public (Imagenes no permanentes)/Imagen de WhatsApp 2024-02-03 a las 10.21.11_e1df0c0e.jpg"
@@ -257,7 +258,7 @@
                 >Redimir</a
               >
               <a href="#" class="link-opcion"
-                ><span class="material-symbols-outlined">favorite</span>Like</a
+                ><span class="material-symbols-outlined like">favorite</span>Like</a
               >
             </div>
             <button class="boton-opcion">Add to cart</button>
@@ -273,6 +274,7 @@
     </section>
     <script src="../../js/modals/modal.js" type="module"></script>
     <script src="../../js/modals/shopCarr.js" type="module"></script>
+    <script src="../../js/modals/favoriteModal.js" type="module"></script>
     <script src="../../js/Home/home.js" type="module"></script>
     <script src="../../js/modals/SearchFilter.js" type="module"></script>
   </body>

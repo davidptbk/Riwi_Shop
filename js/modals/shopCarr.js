@@ -1,264 +1,184 @@
-import { CerrarModalshopCarr } from "./modal"
 document.addEventListener("DOMContentLoaded", function () {
     // selectores
-    //const ModalShoppingCart = document.querySelector(".carrito");
     const AddToCart = document.querySelectorAll(".boton-opcion");
-    const ModalContent = document.querySelector(".carrito");
-    const modal = document.getElementById('modal');
-    const iconShop = document.querySelector("#shopping-js");
+    const ModalContent = document.querySelector(".Contain-carrito");
     const titleModalKart = document.getElementById("titleModalKart");
-    const image = document.createElement("img");
-    const contentCar= document.querySelector(".Contain-carrito");
 
-
-
-
-    // mantenedor de clicks segun el identificador y local storage
-    const clickCounters = JSON.parse(localStorage.getItem("clickCounters")) || [];
+    // Cargamos el subtotal desde localStorage
+    const subtotal = localStorage.getItem("subtotal");
+    if (subtotal) {
+        const subtotalElement = document.querySelector('.precio-subtotal');
+        subtotalElement.textContent = parseFloat(subtotal).toLocaleString('de-DE');
+    }
 
     // local storage funcional.
     let carritoIds = JSON.parse(localStorage.getItem("carritoIds")) || [];
 
     // pintar los identificadores en el local storage.
-    carritoIds.forEach(id => {
-        agregarIdentificador(id, clickCounters[id]);
+    carritoIds.forEach(producto => {
+        agregarIdentificador(producto);
     });
-
-    function vaciarContenido() {
-        let elemento = document.querySelector('.Contain-carrito');
-        elemento.innerHTML = '';
-    }
-    vaciarContenido();
-
-
-    // funcion para abrir y cerrar el modal.
-
-    // document.addEventListener("click", (event) => {
-    //     if (event.target === modal) {
-    //         CerrarModalshopCarr()
-    //     }
-    // })
 
     //funcion para poner el icono de shopping al lado de ShopingKart
 
-    function agregarImagenAlModal() {
-        const image = document.createElement("img");
-        image.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAANVJREFUSEvtldsNwjAUQ91NYJOyCZ0EmAQxCWzSbgK1dIPyaOI+iPhpfiLlcY/tpkmDyq2pXB9zAS2ACwD2w9i/ADysL2qcAzgDuE9UIYiQa4mgAFT8tAI3K3YYXRBKR4R0JScKQOUs5or7Yp0zxnXKuVCAHgAVH02tX4fjnKcLzk82BXjbrtw6NZ+cIubN3Le0wFGszCnaAuDeb90cwI2rCOL5ZP3fAUujWuxgByT/gTo1KrL9G6iEICP6xV0UXN/xn+w/jVJu5pULHiB1Xa+BBHuqAz6nVjYZoIEDgAAAAABJRU5ErkJggg==";
-        image.id = "IconBagShopping";
-        titleModalKart.insertAdjacentElement('afterend', image);
-    }
+    // function agregarImagenAlModal() {
+    //     const image = document.createElement("img");
+    //     image.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAANVJREFUSEvtldsNwjAUQ91NYJOyCZ0EmAQxCWzSbgK1dIPyaOI+iPhpfiLlcY/tpkmDyq2pXB9zAS2ACwD2w9i/ADysL2qcAzgDuE9UIYiQa4mgAFT8tAI3K3YYXRBKR4R0JScKQOUs5or7Yp0zxnXKuVCAHgAVH02tX4fjnKcLzk82BXjbrtw6NZ+cIubN3Le0wFGszCnaAuDeb90cwI2rCOL5ZP3fAUujWuxgByT/gTo1KrL9G6iEICP6xV0UXN/xn+w/jVJu5pULHiB1Xa+BBHuqAz6nVjYZoIEDgAAAAABJRU5ErkJggg==";
+    //     image.id = "IconBagShopping";
+    //     titleModalKart.insertAdjacentElement('afterend', image);
+    // }
 
-    agregarImagenAlModal();
+    // agregarImagenAlModal();
 
     // funcion para añadir algo al carrito
     AddToCart.forEach((button, index) => {
         button.addEventListener("click", () => {
             const productId = index + 1;
-
-            // incrementador del contador de cliks 
-            clickCounters[productId] = (clickCounters[productId] || 0) + 1;
-
-            // esto verifica si el identificador ya esta dentro de la lista
-            const identificadorExistente = ModalContent.querySelector(`.identificador[data-id="${productId}"]`);
-
-            if (identificadorExistente) {
-                // actualizar el contador del identificador correspondiente
-                const contadorElement = identificadorExistente.querySelector(".contador");
-                contadorElement.textContent = `${clickCounters[productId]} X`;
+    
+            // Obtén la información del producto
+            const card = document.querySelector(`.card[data-id="${productId}"]`);
+            const nombreProducto = card.querySelector('.info-product h2').textContent;
+            const precioProducto = card.querySelector('.info-product h2 span').textContent;
+            const imagenProducto = card.querySelector('.content-image img').src;
+    
+            // Verifica si el producto ya está en el carrito
+            const productoExistente = carritoIds.find(producto => producto.id === productId);
+    
+            if (productoExistente) {
+                // Incrementa la cantidad del producto existente
+                productoExistente.cantidad++;
             } else {
-                // esto es para agregar un identificador al modal
-                agregarIdentificador(productId, clickCounters[productId]);
-
-                //añadir el productId a carritoIds y actualizar el local storage
-                carritoIds.push(productId);
+                // Crea un nuevo producto y lo agrega al carrito
+                const producto = {
+                    id: productId,
+                    nombre: nombreProducto,
+                    precio: precioProducto,
+                    imagen: imagenProducto,
+                    cantidad: 1
+                };
+                carritoIds.push(producto);
             }
-
+    
+            // Actualiza el localStorage
             localStorage.setItem("carritoIds", JSON.stringify(carritoIds));
-            localStorage.setItem("clickCounters", JSON.stringify(clickCounters));
+    
+            // Actualiza el carrito en la página
+            actualizarCarrito(carritoIds);
         });
-    })
+    });
+    
+    function actualizarCarrito(carritoIds) {
+        const ModalContent = document.querySelector(".Contain-carrito");
+    
+        // Limpia el contenido actual del carrito
+        ModalContent.innerHTML = '';
+    
+        // Agrega cada producto al carrito
+        carritoIds.forEach(producto => {
+            agregarIdentificador(producto);
+        });
+    }
 
+    // Función para agregar un producto al carrito
+    function agregarIdentificador(producto) {
+        const ModalContent = document.querySelector(".Contain-carrito");
 
-
-
-
-    // funcion para agregar un identificador al modal
-    function agregarIdentificador(id, clickCount) {
         const identificador = document.createElement("div");
         identificador.classList.add("identificador");
-        identificador.setAttribute("data-id", id);
+        identificador.setAttribute("data-id", producto.id);
 
-        // esto busca la card correspondiente al identificador
-        const card = document.querySelector(`.card[data-id="${id}"]`);
+        // Crea la imagen del producto
+        const imageElement = document.createElement("img");
+        imageElement.src = producto.imagen;
+        identificador.appendChild(imageElement);
 
-        //verificamos que se haya encontrado una card
-        if (card) {
+        // Crea el nombre del producto
+        const nombreParrafo = document.createElement("p");
+        nombreParrafo.textContent = producto.nombre;
 
-            //obtenemos la imagen del producto
-            const imageElement = card.querySelector('.content-image img');
-            if (imageElement) {
-                //creamos una copia de la imagen
-                const imageCopy = imageElement.cloneNode();
+        // Crea el contador
+        const contador = document.createElement("span");
+        contador.classList.add("contador");
+        contador.textContent = `${producto.cantidad} X`;
 
-                //agregamos la copia de la imagen al identificador
-                identificador.appendChild(imageCopy);
-            }
-            const nombreElement = card.querySelector('.info-product h2');
+        // Crea el contenedor para el nombre y el contador
+        const contenedor = document.createElement("div");
+        contenedor.className = "info-compra";
+        contenedor.appendChild(nombreParrafo);
+        contenedor.appendChild(contador);
 
-            if (nombreElement) {
-                //obtenemos el nombre del producto
-                const nombreProducto = nombreElement.textContent;
+        // Crea el precio del producto
+        const precioParrafo = document.createElement("p");
+        precioParrafo.textContent = producto.precio;
+        precioParrafo.classList.add("precioParrafo")
 
-                // crear el parrafo con el nombre del producto
-                const nombreParrafo = document.createElement("p");
-                nombreParrafo.textContent = `${nombreProducto}`;
+        // Crea el contenedor para el precio y el contador
+        const precioYcontador = document.createElement("div");
+        precioYcontador.className = "precioYcontador";
+        precioYcontador.appendChild(contador);
+        precioYcontador.appendChild(precioParrafo);
+        contenedor.appendChild(precioYcontador);
 
-                // contador
-                const contador = document.createElement("span");
-                contador.classList.add("contador");
-                contador.textContent = `${clickCount} X`;
+        // Crea el botón para eliminar un producto
+        const eliminarBoton = document.createElement("i");
+        eliminarBoton.className = "bx bxs-x-circle bx-flashing-hover eliminar";
+        eliminarBoton.addEventListener("click", () => {
+            // Elimina el producto al clickear x
+            eliminarIdentificador(producto.id);
+        });
 
-                //contenedor para el nombre y el contador
-                const contenedor = document.createElement("div");
-                contenedor.className = "info-compra";
-                contenedor.appendChild(nombreParrafo);
-                contenedor.appendChild(contador);
+        // Agrega los elementos al identificador, el nombre, el contador y el botón x
+        identificador.appendChild(contenedor);
+        identificador.appendChild(eliminarBoton);
 
-                //obtenemos el elemento del precio del producto
-                const precioElement = card.querySelector('.info-product h2 span');
+        // Agrega el identificador al modal
+        ModalContent.appendChild(identificador);
 
-                if (precioElement) {
-                    //obtenemos el precio del procuto
-                    const precioProducto = precioElement.textContent;
-                    //creamos el parrafo con el precio del producto
-                    const precioParrafo = document.createElement("p");
-                    precioParrafo.textContent = `${precioProducto}`;
-
-                    //creamos el contenedor para el precio y el contador
-                    const precioYcontador = document.createElement("div");
-                    precioYcontador.className = "precioYcontador";
-
-                    //agregamos el precio y el contador al contenedor
-                    precioYcontador.appendChild(contador);
-                    precioYcontador.appendChild(precioParrafo);
-
-                    //agregamos el contenedor del precio y el contador al contenedor de info-compra
-                    contenedor.appendChild(precioYcontador);
-                }
-
-
-
-                // boton para eliminar un producto
-                const eliminarBoton = document.createElement("i");
-                eliminarBoton.className = "bx bxs-x-circle bx-flashing-hover eliminar";
-                //eliminarBoton.classList.add("eliminar");
-                eliminarBoton.addEventListener("click", () => {
-                    // elimina el producto al clickear x
-                    eliminarIdentificador(id);
-                });
-
-                // agrega los elementos al identificador, el nombre, el contador y el boton x
-                identificador.appendChild(contenedor);
-                identificador.appendChild(eliminarBoton);
-
-                // agregamos el dentificador al modal
-                contentCar.appendChild(identificador);
-
-                // // hay que llamar a subtotal para que se atualice cada vez que se elimina un identificador del modal
-                calcularSubtotal();
-            }
-
-        } else {
-            console.error(`no hay ninguna card con esa data-id="${id}".`);
-        }
-
+        // Llama a calcularSubtotal para que se actualice cada vez que se agrega un identificador al modal
+        calcularSubtotal();
     }
 
 
-    // funcion para eliminar un producto del modal y del local storage
-    function eliminarIdentificador(id) {
-        // filtracion del array para no eliminar los demas id, solo el que se esta seleccionando
-        carritoIds = carritoIds.filter(itemId => itemId !== id);
 
-        // despues, que se actualice el local storage
+    // Función para eliminar un producto del carrito y del localStorage
+    function eliminarIdentificador(id) {
+        // Filtra el array para no eliminar los demás productos, solo el que se está seleccionando
+        carritoIds = carritoIds.filter(producto => producto.id !== id);
+
+        // Actualiza el localStorage
         localStorage.setItem("carritoIds", JSON.stringify(carritoIds));
 
-        //eliminar el recuento de clicks del producto que se borro
-        delete clickCounters[id];
-        localStorage.setItem("clickCounters", JSON.stringify(clickCounters));
-
-        // eliminamos el identificador del modal
+        // Elimina el producto del modal
+        const ModalContent = document.querySelector(".Contain-carrito");
         const identificadorExistente = ModalContent.querySelector(`.identificador[data-id="${id}"]`);
         if (identificadorExistente) {
             ModalContent.removeChild(identificadorExistente);
         }
 
-        // hay que llamar a subtotal para que se atualice cada vez que se elimina un identificador del modal
+        // Llama a calcularSubtotal para que se actualice cada vez que se elimina un producto del carrito
         calcularSubtotal();
     }
 
-    // funcion para calcular el subtotal
+
+    // Función para calcular el subtotal
     function calcularSubtotal() {
-        // seleccionamoos todos los elementos de precio y contador del html
+        // Seleccionamos todos los elementos de precio y contador del html
         const preciosYContador = ModalContent.querySelectorAll('.precioYcontador p');
-
-        // el subtotal empieza desde 0
+        // El subtotal empieza desde 0
         let subtotal = 0;
-
-        // iteramos sobre cada precio y contador
+        // Iteramos sobre cada precio y contador
         preciosYContador.forEach(precioElement => {
             const precio = parseFloat(precioElement.textContent.replace(/\./g, ''));
             const contadorElement = precioElement.parentElement.querySelector('.contador');
             const contador = parseInt(contadorElement.textContent);
-
-            // agregamos el precio multiplicado por el contador al subtotal
+            // Agregamos el precio multiplicado por el contador al subtotal
             subtotal += precio * contador;
         });
-
         const subtotalElement = document.querySelector('.precio-subtotal');
-        // actualizamos el contenido del elemento con el subtotal calculado
+        // Actualizamos el contenido del elemento con el subtotal calculado
         subtotalElement.textContent = subtotal.toLocaleString('de-DE');
+
+        // Guardamos el subtotal en localStorage
+        localStorage.setItem("subtotal", subtotal);
     }
-    calcularSubtotal();
-
-
-
-
-
-
-    //funcion para añadir los botones al final del modal
-
-
-    // function botonesCartYCheckOut() {
-    //     const hr = document.createElement('hr');
-
-
-
-    //     const botonCart = document.createElement("button");
-    //     botonCart.textContent = "Cart";
-    //     botonCart.id = "botonCart";
-    //     const botonCheckout = document.createElement("button");
-    //     botonCheckout.textContent = "CheckOut";
-    //     botonCheckout.id = "botonCheckOut";
-
-    //     botonCheckout.addEventListener("click", () => {
-    //         window.location.href = "/redirects/paymentPage.html"
-    //     })
-    //     botonCart.addEventListener("click", () => {
-    //         window.location.href = "/e-comerse/redirects/shoppingCar.html"
-    //     })
-
-    //     const contenedorCartYCheckOut = document.createElement("div");
-    //     contenedorCartYCheckOut.className = "contenedorCartYCheckOut";
-
-
-    //     contenedorCartYCheckOut.appendChild(botonCart);
-    //     contenedorCartYCheckOut.appendChild(botonCheckout);
-
-    //     if (!ModalContent.querySelector("#botonCart")) {
-    //         ModalContent.appendChild(contenedorCartYCheckOut);
-    //     }
-    // }
-    // botonesCartYCheckOut();
-
 });

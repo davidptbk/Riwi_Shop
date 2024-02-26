@@ -1,6 +1,6 @@
 .account{
     width: 300px;
-    height: 200px;
+    height: 230px;
     background-color: rgb(255, 255, 255);
     position: absolute;
     right: 4%;
@@ -10,7 +10,7 @@
     align-items: center;
     display: none;
     border-radius: 5px;
-   
+   gap: 10px;
 }
 
     
@@ -51,6 +51,29 @@
 }.inicio-RegistrerBut:hover{
     background-color: var(--color3);
     color: white;
+}
+#idiomaStatus{
+  position: relative;
+  top: 20px;
+  right: 30px;
+}
+
+
+
+
+#languageSelector{
+    width: 200px;
+    border: 1px solid rgba(0, 0, 0, 0.076);
+    text-align: center;
+    padding: 2px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+#languageSelector option{
+    padding: 60px;
+    font-size: 1.2em;
+    height: 20px;
+    border-radius: 1px;
 }
 
 

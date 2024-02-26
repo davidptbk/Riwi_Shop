@@ -9,7 +9,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
 
 
-.liked{
+.liked {
     width: 400px;
     height: 60%;
     background-color: rgb(255, 255, 255);
@@ -24,7 +24,7 @@
 }
 
 
-.Name-liked{
+#titleModalFavorite {
     width: 99%;
     height: auto;
     display: flex;
@@ -32,17 +32,38 @@
     padding-top: 12px;
     font-size: calc(.2em + 1vw);
     font-weight: bolder;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
-.Contain-liked{
-    width: 99%;
+
+.Contain-liked {
+    width: 85%;
     height: 75%;
-    overflow-y: scroll;
+    overflow-y: scroll !important;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
-    display: none;
 }
-.botones-liked{
+
+.precio{
+    color: #6B5CFF;
+}
+.Contain-liked::-webkit-scrollbar {
+    width: 12px;
+}
+
+.Contain-liked::-webkit-scrollbar-thumb {
+    background-color: #6B5CFF;
+    border-radius: 5px;
+}
+
+.Contain-liked::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0) !important
+}
+
+.botones-liked {
     width: 100%;
     height: auto;
     position: absolute;
@@ -52,6 +73,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .botones-liked a {
     text-decoration: none;
 }
@@ -70,11 +92,13 @@
 .botonsCart:hover {
     background-color: var(--color3);
     color: white;
+    cursor: pointer;
 }
+
 @media (max-width: 868px) {
 
     .liked {
-       right: 20%;
+        right: 20%;
     }
 
 
