@@ -4,7 +4,7 @@
       "id": "a2e2",
       "role": "admin",
       "names": "David",
-      "lasNames": "Pineda",
+      "lastNames": "Pineda",
       "email": "riwi@test.io",
       "cellphone": "3218456715",
       "region": "Antioquia",
@@ -37,14 +37,23 @@
   ],
   "products": [
     {
-      "id": "1o3p",
-      "title": "Riwi rubber duck",
-      "description": "It's a duck that says /JAVA/.",
-      "images": [],
+      "id": "945d",
+      "title": "Riwi Towel",
+      "description": "You can dry all the time",
+      "images": "1",
       "dealer": "Riwi",
-      "price": 10000,
-      "model": "R1122",
-      "category": "Coders accessories",
+      "price": "10000",
+      "model": "TL123",
+      "features": {}
+    },
+    {
+      "id": "5f20",
+      "title": "Quack R",
+      "description": "a Ruber duck say JAVA",
+      "images": "1234",
+      "dealer": "Riwi",
+      "price": "9000",
+      "model": "D123",
       "features": {}
     }
   ],
@@ -82,6 +91,11 @@
       ]
     }
   ],
-  "categories": [],
+  "categories": [
+    {
+      "id": "65qw",
+      "name": "Coders accessories"
+    }
+  ],
   "sales": []
 }

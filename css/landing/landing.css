@@ -196,6 +196,7 @@ body {
 .redon-but-cat p {
     position: absolute;
     bottom: -30px;
+    pointer-events: none;
 }
 
 .carrusel-1 {
@@ -524,6 +525,14 @@ body {
     padding: 30px;
 
 }
+.carr-Overflow img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position:center center;
+}
+
+
 .classBuv3:hover{
     background-color: var(--color2);
 }
@@ -531,11 +540,13 @@ body {
     transform: scale(1.1);
 }
 
+
+
 .oc-carrucel {
     z-index: 1;
     width: 70%;
     height: 100%;
-    background-color: var(--color3);
+    background-color: var(--color5);
     clip-path: polygon(100% 0%, 100% 49%, 100% 100%, 48% 100%, 26% 57%, 42% 19%);
     top: 0;
     right: 0;

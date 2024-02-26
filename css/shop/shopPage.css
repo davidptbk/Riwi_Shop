@@ -43,6 +43,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    color: white;
+
 }
 
 .met-links {
@@ -59,6 +61,7 @@
 
 .tex-fot h1 {
     font-size: 4em;
+    
 }
 
 
@@ -88,7 +91,7 @@
 
 .redi-c {
     text-decoration: none;
-    color: var(--total);
+    color: rgb(253, 251, 97);
     position: relative;
 }
 
@@ -119,11 +122,13 @@
     align-items: center;
     justify-content: space-around;
     flex-wrap: nowrap;
+    color: white;
+
 }
 
 .navar-2 h2 span {
     font-size: calc(0.2em + 1vh);
-    color: rgba(0, 0, 0, 0.335);
+    color: rgba(255, 255, 255, 0.335);
 }
 
 .navar-2 h2 {

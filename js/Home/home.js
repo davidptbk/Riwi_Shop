@@ -6,6 +6,13 @@ const dotsContainer = document.querySelector('.dots');
 const totalSlides = document.querySelectorAll('.slide').length;
 let currentSlide = 0;
 
+//selector Categories
+const circuleMeta = document.querySelector(".ct-1");
+
+
+
+
+
 // Crear puntos dinámicamente
 for (let i = 0; i < totalSlides; i++) {
     const dot = document.createElement('div');
@@ -85,3 +92,10 @@ function redireccionar() {
 function chekaut(){
     window.location.href = "e-comerse/redirects/chekout.html";
 }
+
+
+//event categories 
+circuleMeta.addEventListener("click",(event)=>{
+
+    console.log(event.target)
+})
