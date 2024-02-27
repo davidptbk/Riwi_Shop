@@ -41,22 +41,26 @@
     width: 99%;
     justify-content: space-between;
     border: 1px solid black;
-    padding: 20px;
     margin: 0 auto;
+    padding: 80px;
   }
   
   .subcuadro {
-    width: 45%;
+    margin: 20px;
+    width: 50%;
+    height: 400px;
     border: 1px solid black;
     padding: 20px;
   }
   
   .listaProductos {
-    margin-right: 10px;
+    width: 70%;
+    
   }
   
   .cartTotals {
-    margin-left: 10px;
+    width: 30%;
+
 }
   
 .cuadro-seguridad {
