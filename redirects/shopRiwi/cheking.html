@@ -1,1 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!------Links Imports-->
+    <link rel="stylesheet" href="../../css/gobal/global.css">
+    <!------Links Global-->
+    <link rel="stylesheet" href="../../css/landing/landing.css">
+    <link rel="stylesheet" href="../../css/header/header.css">
+    <link rel="stylesheet" href="../../css/checking/checking.css">
+    <link rel="stylesheet" href="../../css/footer/footer.css">
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> 
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+     <!------Links modals-->
+    <link rel="stylesheet" href="../../css/modalsGenal/account.css">
+    <link rel="stylesheet" href="../../css/modalsGenal/carrito.css">
+    <link rel="stylesheet" href="../../css/modalsGenal/liked.css">
+    <link rel="stylesheet" href="../../css/Cart/cart.css">
+    <link rel="icon" href="../../media/Assets 1 (Esenciales)/logos (Marca)/logoRiwiShop.png" type="image/x-icon" />
+    <!---more Styles-->
+    <link rel="stylesheet" href="../../css/shop/filterBuscar/filBus.css">
 
+
+
+    <link rel="stylesheet" href="../../css/aplication/shop-filter-search/styles.css"/>
+    <title>Cart Riwi</title>
+  </head>
+  <!------Cabecera-->
+  <header class="head-v-top">
+    <section class="contains-v-top">
+      <a href="../../LandingPage.html" class="logo-up-1">
+        <img src="../../media/Assets 1 (Esenciales)/logos (Marca)/logoRiwiShop.png"
+      /></a>
+      <div class="cpmtains-aC">
+        <div class="Men-AS">
+          <input type="checkbox" id="menu-toggle" />
+          <label for="menu-toggle" id="menu-icon">&#9776;</label>
+          <div id="menu">
+            <ul>
+              <li><a href="../LandingPage.html">Home</a></li>
+              <li><a href="../redirects/shop.html">Shop</a></li>
+              <li>
+                <a href="/redirects/aboutProducts.html">About</a>
+              </li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="Meta-aRF">
+          <a href="../../LandingPage.html">Home</a>
+          <a href="../../redirects/shopRiwi/shop.html">Shop</a>
+          <a href="../contact/AboutUs.html">About</a>
+          <a href="../contact/contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="icons-top1">
+       <div class="login-but btn-1"><span class="material-symbols-outlined" id="account-js">person</span></div>
+       <div class="corazon-but btn-1"><span class="material-symbols-outlined" id="favorite-js">favorite</span></div> 
+       <div class="shop-bur btn-1"><span class="material-symbols-outlined" id="shopping-js">shopping_cart</span></div</div>
+    </section>
+  </header>
+  
+<!------Cabecera-->
+<!------Cabecera-->
+<!------Cabecera-->
+<!------Cabecera-->
+<section class="account">
+  <div class="Name-tag">
+      <h4>Iniciar sesion</h4>
+  </div>
+  <div class="op-Account">
+      <h5>Ya tienes una cuenta?<br>Inicia sesion</h5>
+  </div>
+  <div class="but-account">
+      <a href="./redirects/login.html"><button class="inicio-RegistrerBut">Iniciar sesion</button></a>
+      <div class="op-moreRegistrer">
+          <p>or <a href="./redirects/login.html">Registrate</a>
+          </p>
+      </div>
+  </div>
+</section>
+<!------carrito-->
+<!------carrito-->
+<!------carrito-->
+<section class="carrito">
+  <p id="titleModalKart">Shopping Cart</p>
+  <hr class="sep">
+  <div class="Contain-carrito"></div>
+  <section class="subtotal"><p class="palabra-subtotal">Subtotal</p><p class="precio-subtotal">precio</p></section>
+  <section class="botones-carrito"><a href="../../redirects/shopRiwi/cart.html"><button class="botonsCart cart" id="botonCart">Cart</button></a><a href="../../redirects/shopRiwi/cheking.html"><button class="botonsCart check" id="botonCheckOut">CheckOut</button></a></section>
+</section>
+<!------carrito-->
+<section class="liked">
+  <p id="titleModalFavorite">My likes</p>
+  <hr class="sep">
+  <div class="Contain-liked"></div>
+  <div class="botones-liked">
+      <a href=""><button class="botonsCart cart">Cart</button></a>
+  </div>
+</section>
+<!------carrito-->
+
+<body>
+    <div class="efect">
+        <!------Estructura base-->
+        <div class="Navegator-text">
+            <img src="../../media/public (Imagenes no permanentes)/Rectangle 1.png">
+            <div class="tex-fot">
+                <h1 class="contac" id="contac">Checkout</h1>
+                <div class="met-links">
+                    <a href="../../LandingPage.html" class="redi-c"><strong>Home<box-icon name='chevron-right'
+                                class="flech"></box-icon></strong><span><a>Shop</a></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="checking">
+            <div class="data-comp">
+                <h2 class="titleSecCheking">Billing details</h2>
+                <form id="formCheking">
+                    <div class="nombreYapellidoJuntos">
+                        <label for="name" id="name">Your First Name</label>
+                        <input type="text" name="name" id="name" placeholder="name" required>
+                    </div>
+
+                    <div class="nombreYapellidoJuntos">
+                        <label for="lastname" id="lastname">Your Last Name</label>
+                        <input type="text" name="name" id="lastname" placeholder="last name" required>
+                    </div>
+
+                    <label for="company" id="company">Your Company name (Optional)</label>
+                    <input type="text" name="company" id="company" placeholder="Optional">
+
+
+                    <label for="contry" id="contryLabel">Country/Region</label>
+                    <select id="contry" name="contry" required>
+                        <option value="opcion0"></option>
+                        <option value="opcion1">Medellin</option>
+                        <option value="opcion2">Bogota</option>
+                        <option value="opcion3">Cali</option>
+                    </select>
+
+                    <label for="streetAdress" id="streetAdress">Street Address</label>
+                    <input type="text" name="streetAdress" id="streetAdress" placeholder="street address" required>
+
+                    <label for="townCity" id="townCity">Town/City</label>
+                    <input type="text" name="townCity" id="townCity" placeholder="town/city" required>
+
+                    <label for="province" id="province">Province</label>
+                    <input type="text" name="province" id="province" placeholder="province" required>
+
+                    <label for="zipCode" id="zipCode">ZIP Code (Optional)</label>
+                    <input type="text" name="zipCode" id="zipCode" placeholder="your zip code">
+
+                    <label for="number" id="number">Phone</label>
+                    <input type="number" name="mesaje" id="number" placeholder="+57.." required>
+
+                    <label for="email">Email Address</label>
+                    <input type="email" name="email" id="email" placeholder="yourEmail@gmail.com" required>
+
+                    <label for="subjet" id="subejt">Subjet</label>
+                    <input type="text" name="subjet" id="subjet" placeholder="Optional">
+
+
+
+                </form>
+            </div>
+            <div class="product-inf-check">
+                <div class="inf-check">
+                    <h4 id="productoTitulo">Product</h4>
+                    <h4 id="subtotalTitulo">Subtotal</h4>
+                </div>
+                <div class="produc-infoCheck">
+                    <p id="nombreProducto">Patito riwi <span>x1</span></p>
+                    <p>cop. 250,000.00</p>
+                </div>
+                <div class="totalChek">
+                    <h2 id="subtotalTITULO2">Subtotal</h2>
+                    <p>cop. 250,000.00</p>
+                </div>
+                <div class="totalityChek">
+                    <h2 id="totalTitulo">Total</h2>
+                    <p class="price-check">cop. 250,000.00</p>
+                </div>
+
+                <hr>
+                <div class="method-page">
+                    <div class="op1">
+                        <div class="presect"></div>
+                        <p>Direct Bank Tranfer</p>
+                    </div>
+                    <p class="infoPage">Make your payment directly into our bank account. Please use your Order ID as
+                        the payment reference. Your order will not be shipped until the funds have cleared in our
+                        account.</p>
+                    <div class="op1">
+                        <div class="presect"></div>
+                        <p id="directBankTransfer">Direct Bank Tranfer</p>
+                    </div>
+                    <div class="op1">
+                        <div class="presect"></div>
+                        <p id="cashDelivery">Cash On Delivery</p>
+                    </div>
+                    <p class="alert">Your personal data will be used to support your experience throughout this website,
+                        to manage access to your account, and for other purposes described in our <a href="">privacy
+                            policy.</a></p>
+                </div>
+                <div class="butBuy">
+                    <button class="changeBuy">Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="../../js/modals/modal.js" type="module"></script>
+    <script src="../../js/modals/shopCarr.js" type="module"></script>
+    <script src="../../js/modals/favoriteModal.js" type="module"></script>
+    <script src="../../js/Home/home.js" type="module"></script>
+</body>
+
+<footer>
+    <section class="logo-and-info">
+        <div class="part-1">
+            <div class="logo"> <img src="../../media/Assets 1 (Esenciales)/logos (Marca)/Fondo-claro-logo.png"></div>
+            <div class="info"> cl. 16 #55-129,Centro Comercial de <br>Moda Outlet,piso3</div>
+        </div>
+        <div class="part-2">
+            <h2>Company</h2>
+            <a href="../../redirects/contact/faqs.html">About us</a>
+            <a href="../../redirects/contact/contact.html">Contact</a>
+        </div>
+        <div class="part-2">
+            <h2>Oferta</h2>
+            <a href="https://riwi.io/curso/">Curso Desarrollo</a>
+            <a
+                href="https://api.whatsapp.com/send/?phone=573017325327&text=%C2%A1Hola%21+Quisiera+saber+m%C3%A1s+sobre+Riwi.&type=phone_number&app_absent=0">Solicitud</a>
+            <a href="">Products</a>
+        </div>
+        <div class="part-2">
+            <h2>Oferta</h2>
+            <a href="">Curso Desarrollo</a>
+            <a href="">Solicitud</a>
+            <a href="">Products</a>
+        </div>
+        </div>
+    </section>
+    </div>
+</footer>
+
+</html>
