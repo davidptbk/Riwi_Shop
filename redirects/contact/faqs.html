@@ -2,377 +2,468 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!------Links Imports-->
+    <link rel="stylesheet" href="../../css/contact/faqs.css">
+    <!-- <link rel="stylesheet" href="../../css/gobal/global.css">  -->
+    <!------Links Global-->
     <link rel="stylesheet" href="../../css/header/header.css">
     <link rel="stylesheet" href="../../css/footer/footer.css">
-    <link rel="stylesheet" href="../../css/contact/faqs.css">
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> 
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+     <!------Links modals-->
+    <link rel="stylesheet" href="../../css/modalsGenal/account.css">
+    <link rel="stylesheet" href="../../css/modalsGenal/carrito.css">
+    <link rel="stylesheet" href="../../css/modalsGenal/liked.css">  
+    <link rel="icon" href="../../media/Assets 1 (Esenciales)/logos (Marca)/logoRiwiShop.png" type="image/x-icon" />
     <title>FAQS</title>
   </head>
+  <!------Cabecera-->
+  <header class="head-v-top">
+    <section class="contains-v-top">
+      <a href="../../LandingPage.html" class="logo-up-1">
+        <img src="../../media/Assets 1 (Esenciales)/logos (Marca)/logo2.png"
+      /></a>
+      <div class="cpmtains-aC">
+        <div class="Men-AS">
+          <input type="checkbox" id="menu-toggle" />
+          <label for="menu-toggle" id="menu-icon">&#9776;</label>
+          <div id="menu">
+            <ul>
+              <li><a href="../LandingPage.html">Home</a></li>
+              <li><a href="../redirects/shop.html">Shop</a></li>
+              <li>
+                <a href="/redirects/aboutProducts.html">About</a>
+              </li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="Meta-aRF">
+          <a href="../../LandingPage.html">Home</a>
+          <a href="../../redirects/shopRiwi/shop.html">Shop</a>
+          <a href="../contact/AboutUs.html">About</a>
+          <a href="../contact/contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="icons-top1">
+       <div class="login-but btn-1"><span class="material-symbols-outlined" id="account-js">person</span></div>
+       <div class="corazon-but btn-1"><span class="material-symbols-outlined" id="favorite-js">favorite</span></div> 
+       <div class="shop-bur btn-1"><span class="material-symbols-outlined" id="shopping-js">shopping_cart</span></div</div>
+    </section>
+  </header>
+  
+<!------Cabecera-->
+<!------Cabecera-->
+<!------Cabecera-->
+<!------Cabecera-->
+<section class="account">
+  <div class="Name-tag">
+      <h4>Iniciar sesion</h4>
+  </div>
+  <div class="op-Account">
+      <h5>Ya tienes una cuenta?<br>Inicia sesion</h5>
+  </div>
+  <div class="but-account">
+      <a href="./redirects/login.html"><button class="inicio-RegistrerBut">Iniciar sesion</button></a>
+      <div class="op-moreRegistrer">
+          <p>or <a href="./redirects/login.html">Registrate</a>
+          </p>
+      </div>
+  </div>
+</section>
+<!------carrito-->
+<!------carrito-->
+<!------carrito-->
+<section class="carrito">
+  <p id="titleModalKart">Shopping Cart</p>
+  <hr class="sep">
+  <div class="Contain-carrito"></div>
+  <section class="subtotal"><p class="palabra-subtotal">Subtotal</p><p class="precio-subtotal">precio</p></section>
+  <section class="botones-carrito"><a href=""><button class="botonsCart cart" id="botonCart">Cart</button></a><a href=""><button class="botonsCart check" id="botonCheckOut">CheckOut</button></a></section>
+</section>
+<!------carrito-->
+<section class="liked">
+  <p id="titleModalFavorite">My likes</p>
+  <hr class="sep">
+  <div class="Contain-liked"></div>
+  <div class="botones-liked">
+      <a href=""><button class="botonsCart cart">Cart</button></a>
+  </div>
+</section>
+
   <body>
-    <h1>Preguntas Frecuentes</h1>
-    <div class="faq-container">
-      <div class="faq-title" onclick="toggleFAQ('compras')">Compras</div>
-      <div class="faq-content" id="compras">
-        <article id="pf_compras">
-          <h3>¿A que partes hacemos nuestros envios?</h3>
-          <p>
-            En Riwi Shop nos comprometimos ha poder realizar envios a todo el
-            pais, no solo en el departamente de antioquia ya que todo nuestro
-            pais merece mejores oportunidades y mas posibilidades de salir
-            adelante y con poco poder conseguir lo mejor y una buena calidad.
-          </p>
-          <h3>¿Que metodos de pago manejamos?</h3>
-          <p>
-            En este sentido quisimos ser bastante amplios par aumentar aun mas
-            la accesibilidad de los productos para las personas de bajos
-            recursos. <br />
-            <br />
-            Todos sabemos que normalmente comprar en linea es un poco tedioso al
-            momento de pagar, ya que piden muchisima informacion, servidores
-            lentos o caidos, o un sistema de entrega tardio. Por eso quisimos
-            innovar y por este motivo ser la preferencia de nuestros clientes,
-            solamente pedimos los datos estrictamente necesarios segun el metodo
-            de pago elegido por el cliente.
-          </p>
-
-          <h3>Estos son nuestros distintos metodos de pago</h3>
-          <ul>
-            <li type="circle">Pse</li>
-            <li type="circle">Nequi</li>
-            <li type="circle">Bancos</li>
-            <li type="circle">Tarjetas de credito y debito</li>
-            <li type="circle">Datafono / Efectivo (En nuestra sede fisica)</li>
-          </ul>
-          <p></p>
-          <h3>¿Cuanto tiempo se demoran en llegar los productos?</h3>
-          <p>
-            Uno de nuestros compromisos como la unica empresa especializada en
-            desarrollo de software es la puntualidad, queremos que el mundo
-            pueda mejorar lo mas rapido posible, por eso le prometemos a
-            nuestros clientes que por mas lejos que esten de antioquia en el
-            pais el o los productos encargador no demoraran mas de 5 dias en
-            llegar. <br />
-            <br />
-            Entendemos perfectamente que hay situaciones en la que nuestros
-            clientes necesitan urgentemente un producto en especifico y por
-            nuestra calidad y compromiso con nuestros usuarios nos eligen a
-            nosotros, asi que siempre tratamos de hacer lo mejor para ustedes,
-            enviando de forma rapida y segura el o los productos a su destino.
-          </p>
-          <h3>
-            ¿Como enviamos nuestros productos? ¿Cual es la seguridad de estos en
-            su trayecto?
-          </h3>
-          <p>
-            Siempre buscamos que nuestros usuarios se sientan comodos, por eso a
-            la hora de hacer un pedido le damos la opcion al cliente de que
-            eliga por que medio de envios prefiere que le enviemos el producto y
-            que especifique a donde llegara, tambien nos centramos y aseguramos
-            que el pedido se le entregue a la persona correcta, para evitar
-            hurtos y confuciones. <br />
-            <br />
-            Le asegurar a nuestros clientes que sus productos van a llegar
-            intactos y en perfecto estado a su destino, ya que nosotros mismos
-            nos encargamos de hacer un exhaustivo empacado, protegiendo los
-            productos segun las condiciones requeridas para este; si el producto
-            llega a sufrir algun daño, inmediatamente enviamos con prioridad un
-            nuevo producto a su respectivo propietario y un pequeño   lle por
-            el inconveniente.
-          </p>
-          <h3>¿Hay descuentos en los productos?</h3>
-          <p>
-            Efectivamente, tenemos descuentos en nuestros productos para
-            nosotros, en todas las compras superiores a 200.000$ pesos
-            colommbianos tenemos un descuento del 25%, Esto nos ayuda tambien a
-            que nuestros clientes quieran y tengan ganas de comprar todo aquello
-            que los pueda beneficiar ya que aparte del gran precio accesible
-            tendria un gran descuento. <br />
-            <br />
-            Tambien nos gusta premiar a la gente que de verdad quiere salir
-            adelante y se esfuerza por hacerlo, asi que cada 2 meses hacemos un
-            evento donde todas las personas leales a Riwi Shop y al desarrollo
-            de software nos demuestran que estan trabajando para construir un
-            mejor estilo de vida, y todas las personas que cumplan este simple
-            requisito se llevan una tarjeta con el 35% de descuento en todos los
-            productos por dos semanas, pues queremos incentivar a los jovenes
-            coders a que tengan ganas de salir adelante, demostrandoles que esto
-            es por su estulido de vida, y que simplemente queriendo y
-            enfocandose se pueden lograr grandes cosas, pues todo trabajo genera
-            sus frutos.
-          </p>
-        </article>
-      </div>
-
-      <div class="faq-title" onclick="toggleFAQ('devoluciones')">
-        Devoluciones
-      </div>
-      <div class="faq-content" id="devoluciones">
-        <article id="pf_devoluciones">
-          <h3>¿Como pedir una devolucion de dinero?</h3>
-          <p>
-            En el apartado bajo de esta pagina hay un formulario, en el que
-            debes seleccionar la opcion de "Devoluciones / Reembolsos /
-            cambios", dejar tu email, y explicarnos el motivo de la devolucion,
-            factura, fecha de envio del producto, numero de orden y nombre del
-            producto, Al enviar el formulario, en un rango de 3 dias te
-            estaremos respondiendo al correo electronico ingresado, informandote
-            sobre la devolucion del dinero.
-          </p>
-          <h3>¿Como reporto un daño en mi pedido?</h3>
-          <p>
-            Si quieres reportar un daño en tu producto puedes llamarnos en al
-            numero o enviarnos un email, estos estan dados en la seccion de
-            PQRS, o puedes ponerte en contacto con nosotros seleccionando el
-            apartado de "Devoluciones / Reembolsos / Cambios". Para efectuar el
-            cambio debes explicarnos el porque del cambio del producto, numero
-            de referencia del producto, numero de orden, nombre del producto,
-            recibo de compra, y documento de identidad. <br />
-            <br />
-            Debes especificar en este si quieres un reemplazo, cambio de
-            producto o devolucion de dinero. Y si quieres un cambio de producto
-            debes especificar el tipo y nombre del producto deseado.
-          </p>
-          <h3>¿Como pido un cambiar o reemplazar el producto?</h3>
-          <p>
-            Puedes cambiar el producto siempre que el producto no tenga ningun
-            daño, si tiene un daño lo primero que debes hacer es reportarlo,
-            puedes cambiar el producto por otro o por el mismo, si es por un
-            producto diferente deberas agregar el valor faltante hasta llegar al
-            precio acordado, si el producto es mas barato que el que cambiras,
-            al enviar el correo actuares inmediatamente y recojeremos el
-            producto, y este sera revisado, 24 horas despues de recoger el
-            prodcto te transferiremos el dinero que hace falta para llegar al
-            precio del nuevo producto encargado. <br />
-            <br />
-            Puedes cambiar el producto ya sea por gusto, cambio de necesidad,
-            tallaje, o daño en el producto. <br />
-            <br />
-            si quieres hacerlo, puedes ponerte en contacto con nosotros a traves
-            de nuestro correo electronico, numero o puedes seleccionar el
-            apartado de "Devoluciones / Reembolsos / Cambios". Para efectuar el
-            cambio debes explicarnos el porque del cambio del producto, numero
-            de referencia del producto, numero de orden, nombre del producto,
-            recibo de compra, direccion y documento de identidad. Tambien debes
-            especificar en este si quieres un reemplazo, cambio de producto o
-            devolucion de dinero. Y si quieres un cambio de producto debes
-            especificar el tipo y nombre del producto deseado.
-          </p>
-        </article>
-      </div>
-
-      <div class="faq-title" onclick="toggleFAQ('servicioAlCliente')">
-        Servicio al Cliente
-      </div>
-      <div class="faq-content" id="servicioAlCliente">
-        <article id="pf_servicio_al_cliente_y_soporte_tecnico">
-          <h3>¿Como me contacto con el soporte tecnico?</h3>
-          <p>
-            Para contactarte con nuestro soporte puedes hacer mediante una
-            llamada o enviando un email, aqui te dejaremos nuestro telefono y
-            correo electronico. <br />
-            <br />
-            <strong>Teléfono:</strong> Ext 3 (604) 5623457437 <br />
-            <br />
-            <strong>Correo electronico:</strong> servicioRiwiShop@riwi.io
-          </p>
-          <h3>
-            ¿Puedo cambiar o cancelar uno o mas productos de mi compra antes de
-            que me llegue el pedido?
-          </h3>
-          <p>
-            Si, pero hay una condicion para esto. Si quieres cancelar o cambiar
-            un producto de tu compra debes de contactarte con nuestro soporte
-            tecnico, especificando la orden del producto, numero del pedido,
-            nombre de los productos cancelados y nombre de los productos a
-            agregar y confirmar los productos deseados, por este cambio no se
-            aplican tarifas adicionales, pero el pedido se demorara 24 horas mas
-            en llegar a su destino, devido a que debemos reempacar todo el
-            pedido, reorganizar nuestro inventario, y verificar si falta algun
-            monto de dinero del pedido por pagar o hay dinero que devolverle a
-            nuestro usuario, esto debido al cambio de productos.
-          </p>
-        </article>
-      </div>
-
-      <div class="faq-title" onclick="toggleFAQ('cancelaciones')">
-        Cancelaciones
-      </div>
-      <div class="faq-content" id="cancelaciones">
-        <article id="pf_cancelaciones">
-          <h3>¿Cómo puedo cancelar mi compra?</h3>
-          <p>
-            Debes de contactarte con nuestro soporte tecnico, servicio al
-            cliente, o seleccionar el campo de "Cancelaciones". Debes
-            especificar, numero de la orden, referencia del pedido, nombre de
-            el/los productos a cancelar y debes explicar el motivo de la
-            cancelacion de este.<br />
-            <br />
-            Para realizar una cancelación tambien puedes ingresar a tu perfil de
-            Riwi Shop, ver tus compras pendientes, meterte a los detalles de la
-            compra, y cancelarla, si el producto esta a menos de 24 de llegar a
-            su destino ya no podras cancelar tu pedido mediante esta opcion.
-          </p>
-          <h3>¿Cuanto tiempo tengo para cancelar mi compra?</h3>
-          <p>
-            Para cancelar tu compra mediante tu perfil tienes 48 horas habiles
-            (2 dias habiles) desde que se hace el pedido. Si pasan mas de 48
-            horas debes de contactarte con nuestro servicio tecnico para
-            cancelar el pedido, tambien puedes comunicarte con nuestro servicio
-            tecnico desde un principio; al comunicarte con nuestro servicio
-            despues de finalizadas las 48 horas tienes otras 24 horas habiles (1
-            dia habil) para realizar la cancelacion, si este tiempo ya finalizo
-            no podras cancelar tu pedido. <br />
-            <br />
-            Deberas seguir el proceso para el cambio o reembolso de el/los
-            producto/s.
-          </p>
-          <h3>
-            ¿Si hago una compra con varios productos, puedo cancelar o cambiar
-            solo uno o mas productos en especifico y que me llegue el resto?
-          </h3>
-          <p>
-            Si, podras hacer la cancelacion o cambio de estos siguiendo las
-            reglas de cancelacion de producto. O simplemente pidiendo un cambio
-            contactandote con el servicio tecnico, especificado, numero de
-            referencia del pedido, orden del envio, y nombre/s de el/los
-            producto/s a cancelar o cambiar o nombre/s de el/los producto/s a
-            agregar.
-          </p>
-        </article>
-      </div>
-
-      <div class="faq-title" onclick="toggleFAQ('otrasPreguntas')">
-        Mas preguntas
-      </div>
-      <div class="faq-content" id="otrasPreguntas">
-        <article id="pf_otras_preguntas">
-          <h2>Otras preguntas de nuestros usuarios</h2>
-          <h3>¿Los productos tienen garantia?</h3>
-          <p>
-            Si, nuestros productos tienen una garantia de 8 meses despues de su
-            compra, ya sean productos tecnologicos, prendas de ropa o productos
-            para la casa. <br />
-            <br />
-            Para Riwi Shop la calidad de nuestros productos es primordial, por
-            eso ofrecemos una buena garantia. En Riwi confiamos plenamente en el
-            trabajo elaborado por nuestros empleados al hacer nuestros
-            productos.
-          </p>
-          <h3>¿Como efectuo la garantia de uno o mas productos?</h3>
-          <p>
-            Para efectuar la garantia de algun productos puedes contactarte con
-            nuestro soporte tecnico a traves de una llamada, email o
-            respondiendo el siguiente formulario, eligiendo la opcion de
-            "Garantia". <br />
-            <br />
-            Debes especificar, tipo del daño y adjuntar evidencia de este a
-            nuestro correo, tambien debes mandarnos, nombre del producto,
-            factura de compra y orden del pedido, estod ultimos lo puedes
-            encontrar en el registro de tus compras en tu perfil. Despues de
-            hacer esto, en un rango de 24 a 48 horas habiles te enviaremos un
-            correo con los nuevos datos de tu nuevo producto y del envio.<br />
-            <br />
-            Cabe aclarar que la garantia solo funcionara en casos de daños no
-            ocacionados, daños de fabrica y errores de diseño, si tu eres el
-            culpable del daño del producto o simplemente no le diste el
-            tratamiento adecuado, deberas comprar con nuevo producto.
-          </p>
-          <h3>
-            ¿Como puedo entrar al programa de Riwi y saber mas informacion sobre
-            este?
-          </h3>
-          <p>
-            Si quieres entrar al programa de educacion de Riwi y/o necesitas
-            <a href="https://riwi.io" target="_blank">mas informacion.</a>
-            En la pagina principal de Riwi podras encontrar toda la informacion
-            sobre Riwi y su programa.
-          </p>
-          <h3>Venden productos de Riwi Shop en el punto fisico de Riwi?</h3>
-          <p>
-            No, no vendemos ningun producto de en el punto fisico de Riwi.
-            <br />
-            <br />
-            Por el momento solo se puden comprar nuestros productos virtualmente
-            en nuestra pagina Riwi Shop pero proximamente se podran comprar
-            estos productos en el centro de entrenamiento de Riwi.
-          </p>
-        </article>
-      </div>
-    </div>
-    <br />
-
-    <div class="PQRS-container">
-      <div class="form-content">
-        <h2>PQRS</h2>
-        <form action="PQRS" method="post">
-          <div class="tipo-de-pqr">
-            <label for="tipo_de_pqr"><strong>Seleccione la opcion a realizar</strong></label> <br>
-            <select name="tipo_de_pqr" id="tipo-de-pqr" required>
-              <div class="options">
-                <option hidden selected="" class="oculto">Tipo de PQRS</option>
-                <option value="inquietud">Inquietudes</option>
-                <hr>
-                <option value="recomendaciones">Sugerencias</option>
-                <hr>
-                <option value="devoluciones">Devoluciones</option>
-                <hr>
-                <option value="reembolsos">Reembolsos</option>
-                <hr>
-                <option value="cancelaciones">Cancelaciones</option>
-                <hr>
-                <option value="garantia">Garantia</option>
-              </div>
-            </select>
-          </div>
-          <br>
-          <div class="email">
-            <label for="correo"> <strong>Ingresa tu correo electronico</strong></label> <br>
-            <input id="correo" type="email" name="correo" id="correo" placeholder="example@gmail.com" required> <br>
-          </div>
-          <br>
-          <div class="textareaForm">
-            <h3 for="faq-content"><strong>Envie su PQRS</strong></h3>
-            <p>Recuerda que si el motivo de tu PQRS es una <strong>Devolucion, Reembolso, Cancelacion de pedido, o reclamar una Garantia</strong> debes dejarnos el numero de factura y fecha y dejarnos saber el motivo de tu PQR para ver en que podemos mejorar nuestro servicio
+    <hr>
+    <div class="contenedor-grande">
+      <h1>Preguntas Frecuentes</h1>
+      <div class="faq-container">
+        <div class="faq-title" onclick="toggleFAQ('compras')">Compras</div>
+        <div class="faq-content" id="compras">
+          <article id="pf_compras">
+            <h3>¿A que partes hacemos nuestros envios?</h3>
+            <p>
+              En Riwi Shop nos comprometimos ha poder realizar envios a todo el
+              pais, no solo en el departamente de antioquia ya que todo nuestro
+              pais merece mejores oportunidades y mas posibilidades de salir
+              adelante y con poco poder conseguir lo mejor y una buena calidad.
             </p>
-            <textarea name="faq-content" id="faq-content" cols="60" rows="10"
-            placeholder="Describe tu PQRS" required class="textarea-content"></textarea>
-          </div>
-          <br>
-          <button type="submit" class="enviar-button">Enviar</button>
-        </form>
+            <h3>¿Que metodos de pago manejamos?</h3>
+            <p>
+              En este sentido quisimos ser bastante amplios par aumentar aun mas
+              la accesibilidad de los productos para las personas de bajos
+              recursos. <br />
+              <br />
+              Todos sabemos que normalmente comprar en linea es un poco tedioso al
+              momento de pagar, ya que piden muchisima informacion, servidores
+              lentos o caidos, o un sistema de entrega tardio. Por eso quisimos
+              innovar y por este motivo ser la preferencia de nuestros clientes,
+              solamente pedimos los datos estrictamente necesarios segun el metodo
+              de pago elegido por el cliente.
+            </p>
+
+            <h3>Estos son nuestros distintos metodos de pago</h3>
+            <ul>
+              <li type="circle">Pse</li>
+              <li type="circle">Nequi</li>
+              <li type="circle">Bancos</li>
+              <li type="circle">Tarjetas de credito y debito</li>
+              <li type="circle">Datafono / Efectivo (En nuestra sede fisica)</li>
+            </ul>
+            <p></p>
+            <h3>¿Cuanto tiempo se demoran en llegar los productos?</h3>
+            <p>
+              Uno de nuestros compromisos como la unica empresa especializada en
+              desarrollo de software es la puntualidad, queremos que el mundo
+              pueda mejorar lo mas rapido posible, por eso le prometemos a
+              nuestros clientes que por mas lejos que esten de antioquia en el
+              pais el o los productos encargador no demoraran mas de 5 dias en
+              llegar. <br />
+              <br />
+              Entendemos perfectamente que hay situaciones en la que nuestros
+              clientes necesitan urgentemente un producto en especifico y por
+              nuestra calidad y compromiso con nuestros usuarios nos eligen a
+              nosotros, asi que siempre tratamos de hacer lo mejor para ustedes,
+              enviando de forma rapida y segura el o los productos a su destino.
+            </p>
+            <h3>
+              ¿Como enviamos nuestros productos? ¿Cual es la seguridad de estos en
+              su trayecto?
+            </h3>
+            <p>
+              Siempre buscamos que nuestros usuarios se sientan comodos, por eso a
+              la hora de hacer un pedido le damos la opcion al cliente de que
+              eliga por que medio de envios prefiere que le enviemos el producto y
+              que especifique a donde llegara, tambien nos centramos y aseguramos
+              que el pedido se le entregue a la persona correcta, para evitar
+              hurtos y confuciones. <br />
+              <br />
+              Le asegurar a nuestros clientes que sus productos van a llegar
+              intactos y en perfecto estado a su destino, ya que nosotros mismos
+              nos encargamos de hacer un exhaustivo empacado, protegiendo los
+              productos segun las condiciones requeridas para este; si el producto
+              llega a sufrir algun daño, inmediatamente enviamos con prioridad un
+              nuevo producto a su respectivo propietario y un pequeño   lle por
+              el inconveniente.
+            </p>
+            <h3>¿Hay descuentos en los productos?</h3>
+            <p>
+              Efectivamente, tenemos descuentos en nuestros productos para
+              nosotros, en todas las compras superiores a 200.000$ pesos
+              colommbianos tenemos un descuento del 25%, Esto nos ayuda tambien a
+              que nuestros clientes quieran y tengan ganas de comprar todo aquello
+              que los pueda beneficiar ya que aparte del gran precio accesible
+              tendria un gran descuento. <br />
+              <br />
+              Tambien nos gusta premiar a la gente que de verdad quiere salir
+              adelante y se esfuerza por hacerlo, asi que cada 2 meses hacemos un
+              evento donde todas las personas leales a Riwi Shop y al desarrollo
+              de software nos demuestran que estan trabajando para construir un
+              mejor estilo de vida, y todas las personas que cumplan este simple
+              requisito se llevan una tarjeta con el 35% de descuento en todos los
+              productos por dos semanas, pues queremos incentivar a los jovenes
+              coders a que tengan ganas de salir adelante, demostrandoles que esto
+              es por su estulido de vida, y que simplemente queriendo y
+              enfocandose se pueden lograr grandes cosas, pues todo trabajo genera
+              sus frutos.
+            </p>
+          </article>
+        </div>
+
+        <div class="faq-title" onclick="toggleFAQ('devoluciones')">
+          Devoluciones
+        </div>
+        <div class="faq-content" id="devoluciones">
+          <article id="pf_devoluciones">
+            <h3>¿Como pedir una devolucion de dinero?</h3>
+            <p>
+              En el apartado bajo de esta pagina hay un formulario, en el que
+              debes seleccionar la opcion de "Devoluciones / Reembolsos /
+              cambios", dejar tu email, y explicarnos el motivo de la devolucion,
+              factura, fecha de envio del producto, numero de orden y nombre del
+              producto, Al enviar el formulario, en un rango de 3 dias te
+              estaremos respondiendo al correo electronico ingresado, informandote
+              sobre la devolucion del dinero.
+            </p>
+            <h3>¿Como reporto un daño en mi pedido?</h3>
+            <p>
+              Si quieres reportar un daño en tu producto puedes llamarnos en al
+              numero o enviarnos un email, estos estan dados en la seccion de
+              PQRS, o puedes ponerte en contacto con nosotros seleccionando el
+              apartado de "Devoluciones / Reembolsos / Cambios". Para efectuar el
+              cambio debes explicarnos el porque del cambio del producto, numero
+              de referencia del producto, numero de orden, nombre del producto,
+              recibo de compra, y documento de identidad. <br />
+              <br />
+              Debes especificar en este si quieres un reemplazo, cambio de
+              producto o devolucion de dinero. Y si quieres un cambio de producto
+              debes especificar el tipo y nombre del producto deseado.
+            </p>
+            <h3>¿Como pido un cambiar o reemplazar el producto?</h3>
+            <p>
+              Puedes cambiar el producto siempre que el producto no tenga ningun
+              daño, si tiene un daño lo primero que debes hacer es reportarlo,
+              puedes cambiar el producto por otro o por el mismo, si es por un
+              producto diferente deberas agregar el valor faltante hasta llegar al
+              precio acordado, si el producto es mas barato que el que cambiras,
+              al enviar el correo actuares inmediatamente y recojeremos el
+              producto, y este sera revisado, 24 horas despues de recoger el
+              prodcto te transferiremos el dinero que hace falta para llegar al
+              precio del nuevo producto encargado. <br />
+              <br />
+              Puedes cambiar el producto ya sea por gusto, cambio de necesidad,
+              tallaje, o daño en el producto. <br />
+              <br />
+              si quieres hacerlo, puedes ponerte en contacto con nosotros a traves
+              de nuestro correo electronico, numero o puedes seleccionar el
+              apartado de "Devoluciones / Reembolsos / Cambios". Para efectuar el
+              cambio debes explicarnos el porque del cambio del producto, numero
+              de referencia del producto, numero de orden, nombre del producto,
+              recibo de compra, direccion y documento de identidad. Tambien debes
+              especificar en este si quieres un reemplazo, cambio de producto o
+              devolucion de dinero. Y si quieres un cambio de producto debes
+              especificar el tipo y nombre del producto deseado.
+            </p>
+          </article>
+        </div>
+
+        <div class="faq-title" onclick="toggleFAQ('servicioAlCliente')">
+          Servicio al Cliente
+        </div>
+        <div class="faq-content" id="servicioAlCliente">
+          <article id="pf_servicio_al_cliente_y_soporte_tecnico">
+            <h3>¿Como me contacto con el soporte tecnico?</h3>
+            <p>
+              Para contactarte con nuestro soporte puedes hacer mediante una
+              llamada o enviando un email, aqui te dejaremos nuestro telefono y
+              correo electronico. <br />
+              <br />
+              <strong>Teléfono:</strong> Ext 3 (604) 5623457437 <br />
+              <br />
+              <strong>Correo electronico:</strong> servicioRiwiShop@riwi.io
+            </p>
+            <h3>
+              ¿Puedo cambiar o cancelar uno o mas productos de mi compra antes de
+              que me llegue el pedido?
+            </h3>
+            <p>
+              Si, pero hay una condicion para esto. Si quieres cancelar o cambiar
+              un producto de tu compra debes de contactarte con nuestro soporte
+              tecnico, especificando la orden del producto, numero del pedido,
+              nombre de los productos cancelados y nombre de los productos a
+              agregar y confirmar los productos deseados, por este cambio no se
+              aplican tarifas adicionales, pero el pedido se demorara 24 horas mas
+              en llegar a su destino, devido a que debemos reempacar todo el
+              pedido, reorganizar nuestro inventario, y verificar si falta algun
+              monto de dinero del pedido por pagar o hay dinero que devolverle a
+              nuestro usuario, esto debido al cambio de productos.
+            </p>
+          </article>
+        </div>
+
+        <div class="faq-title" onclick="toggleFAQ('cancelaciones')">
+          Cancelaciones
+        </div>
+        <div class="faq-content" id="cancelaciones">
+          <article id="pf_cancelaciones">
+            <h3>¿Cómo puedo cancelar mi compra?</h3>
+            <p>
+              Debes de contactarte con nuestro soporte tecnico, servicio al
+              cliente, o seleccionar el campo de "Cancelaciones". Debes
+              especificar, numero de la orden, referencia del pedido, nombre de
+              el/los productos a cancelar y debes explicar el motivo de la
+              cancelacion de este.<br />
+              <br />
+              Para realizar una cancelación tambien puedes ingresar a tu perfil de
+              Riwi Shop, ver tus compras pendientes, meterte a los detalles de la
+              compra, y cancelarla, si el producto esta a menos de 24 de llegar a
+              su destino ya no podras cancelar tu pedido mediante esta opcion.
+            </p>
+            <h3>¿Cuanto tiempo tengo para cancelar mi compra?</h3>
+            <p>
+              Para cancelar tu compra mediante tu perfil tienes 48 horas habiles
+              (2 dias habiles) desde que se hace el pedido. Si pasan mas de 48
+              horas debes de contactarte con nuestro servicio tecnico para
+              cancelar el pedido, tambien puedes comunicarte con nuestro servicio
+              tecnico desde un principio; al comunicarte con nuestro servicio
+              despues de finalizadas las 48 horas tienes otras 24 horas habiles (1
+              dia habil) para realizar la cancelacion, si este tiempo ya finalizo
+              no podras cancelar tu pedido. <br />
+              <br />
+              Deberas seguir el proceso para el cambio o reembolso de el/los
+              producto/s.
+            </p>
+            <h3>
+              ¿Si hago una compra con varios productos, puedo cancelar o cambiar
+              solo uno o mas productos en especifico y que me llegue el resto?
+            </h3>
+            <p>
+              Si, podras hacer la cancelacion o cambio de estos siguiendo las
+              reglas de cancelacion de producto. O simplemente pidiendo un cambio
+              contactandote con el servicio tecnico, especificado, numero de
+              referencia del pedido, orden del envio, y nombre/s de el/los
+              producto/s a cancelar o cambiar o nombre/s de el/los producto/s a
+              agregar.
+            </p>
+          </article>
+        </div>
+
+        <div class="faq-title" onclick="toggleFAQ('otrasPreguntas')">
+          Mas preguntas
+        </div>
+        <div class="faq-content" id="otrasPreguntas">
+          <article id="pf_otras_preguntas">
+            <h2>Otras preguntas de nuestros usuarios</h2>
+            <h3>¿Los productos tienen garantia?</h3>
+            <p>
+              Si, nuestros productos tienen una garantia de 8 meses despues de su
+              compra, ya sean productos tecnologicos, prendas de ropa o productos
+              para la casa. <br />
+              <br />
+              Para Riwi Shop la calidad de nuestros productos es primordial, por
+              eso ofrecemos una buena garantia. En Riwi confiamos plenamente en el
+              trabajo elaborado por nuestros empleados al hacer nuestros
+              productos.
+            </p>
+            <h3>¿Como efectuo la garantia de uno o mas productos?</h3>
+            <p>
+              Para efectuar la garantia de algun productos puedes contactarte con
+              nuestro soporte tecnico a traves de una llamada, email o
+              respondiendo el siguiente formulario, eligiendo la opcion de
+              "Garantia". <br />
+              <br />
+              Debes especificar, tipo del daño y adjuntar evidencia de este a
+              nuestro correo, tambien debes mandarnos, nombre del producto,
+              factura de compra y orden del pedido, estod ultimos lo puedes
+              encontrar en el registro de tus compras en tu perfil. Despues de
+              hacer esto, en un rango de 24 a 48 horas habiles te enviaremos un
+              correo con los nuevos datos de tu nuevo producto y del envio.<br />
+              <br />
+              Cabe aclarar que la garantia solo funcionara en casos de daños no
+              ocacionados, daños de fabrica y errores de diseño, si tu eres el
+              culpable del daño del producto o simplemente no le diste el
+              tratamiento adecuado, deberas comprar con nuevo producto.
+            </p>
+            <h3>
+              ¿Como puedo entrar al programa de Riwi y saber mas informacion sobre
+              este?
+            </h3>
+            <p>
+              Si quieres entrar al programa de educacion de Riwi y/o necesitas
+              <a href="https://riwi.io" target="_blank">mas informacion.</a>
+              En la pagina principal de Riwi podras encontrar toda la informacion
+              sobre Riwi y su programa.
+            </p>
+            <h3>Venden productos de Riwi Shop en el punto fisico de Riwi?</h3>
+            <p>
+              No, no vendemos ningun producto de en el punto fisico de Riwi.
+              <br />
+              <br />
+              Por el momento solo se puden comprar nuestros productos virtualmente
+              en nuestra pagina Riwi Shop pero proximamente se podran comprar
+              estos productos en el centro de entrenamiento de Riwi.
+            </p>
+          </article>
+        </div>
+      </div>
+      <br />
+
+      <div class="PQRS-container">
+        <div class="form-content">
+          <h2>PQRS</h2>
+          <form action="PQRS" method="post">
+            <div class="tipo-de-pqr">
+              <label for="tipo_de_pqr"><strong>Seleccione la opcion a realizar</strong></label> <br>
+              <select name="tipo_de_pqr" id="tipo-de-pqr" required>
+                <div class="options">
+                  <option hidden selected="" class="oculto">Tipo de PQRS</option>
+                  <option value="inquietud">Inquietudes</option>
+                  <hr>
+                  <option value="recomendaciones">Sugerencias</option>
+                  <hr>
+                  <option value="devoluciones">Devoluciones</option>
+                  <hr>
+                  <option value="reembolsos">Reembolsos</option>
+                  <hr>
+                  <option value="cancelaciones">Cancelaciones</option>
+                  <hr>
+                  <option value="garantia">Garantia</option>
+                </div>
+              </select>
+            </div>
+            <br>
+            <div class="email">
+              <label for="correo"> <strong>Ingresa tu correo electronico</strong></label> <br>
+              <input id="correo" type="email" name="correo" id="correo" placeholder="example@gmail.com" required> <br>
+            </div>
+            <br>
+            <div class="textareaForm">
+              <h3 for="faq-content"><strong>Envie su PQRS</strong></h3>
+              <p>Recuerda que si el motivo de tu PQRS es una <strong>Devolucion, Reembolso, Cancelacion de pedido, o reclamar una Garantia</strong> debes dejarnos el numero de factura y fecha y dejarnos saber el motivo de tu PQR para ver en que podemos mejorar nuestro servicio
+              </p>
+              <textarea name="faq-content" id="faq-content" cols="60" rows="10"
+              placeholder="Describe tu PQRS" required class="textarea-content"></textarea>
+            </div>
+            <br>
+            <button type="submit" class="enviar-button">Enviar</button>
+          </form>
+        </div>
       </div>
     </div>
-
     <script src="../../js/contact/faqs.js"></script>
 
-  <footer>
-    <section class="logo-and-info">
+  </body>
+    <!------foooter-->
+
+    <footer>
+      <section class="logo-and-info">
         <div class="part-1">
-            <div class="logo"> <img src="../../media/Assets 1 (Esenciales)/logos (Marca)/Fondo-claro-logo.png"></div>
-            <div class="info"> cl. 16 #55-129,<br>Centro Comercial de Moda Outlet. Piso 3</div>
+          <div class="logo">
+            <img src="../../media/Assets 1 (Esenciales)/logos (Marca)/Fondo-claro-logo.png" />
+          </div>
+          <div class="info">
+            cl. 16 #55-129,Centro Comercial de <br />Moda Outlet,piso3
+          </div>
         </div>
         <div class="part-2">
-            <h2>Company</h2>
-            <a href="">About us</a>
-            <a href="">Contact</a>
+          <h2>Company</h2>
+          <a href="../contact/faqs.html">About us</a>
+          <a href="">Contact</a>
         </div>
         <div class="part-2">
-            <h2>Oferta</h2>
-            <a href="https://riwi.io/curso/">Curso Desarrollo</a>
-            <a
-                href="https://api.whatsapp.com/send/?phone=573017325327&text=%C2%A1Hola%21+Quisiera+saber+m%C3%A1s+sobre+Riwi.&type=phone_number&app_absent=0">Solicitud</a>
-            <a href="">Products</a>
+          <h2>Oferta</h2>
+          <a href="https://riwi.io/curso/">Curso Desarrollo</a>
+          <a
+            href="https://api.whatsapp.com/send/?phone=573017325327&text=%C2%A1Hola%21+Quisiera+saber+m%C3%A1s+sobre+Riwi.&type=phone_number&app_absent=0"
+            >Solicitud</a
+          >
+          <a href="">Products</a>
         </div>
         <div class="part-2">
-            <h2>Conexion</h2>
-            <a href="">Curso Desarrollo</a>
-            <a href="">Solicitud</a>
-            <a href="./redirects/contact/faqs.html">faqs</a>
+          <h2>Oferta</h2>
+          <a href="">Curso Desarrollo</a>
+          <a href="">Solicitud</a>
+          <a href="">Products</a>
         </div>
-        </div>
-    </section>
-</footer>
-</body>
+      </section>
+    </footer>
+
 </html>
