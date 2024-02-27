@@ -2,23 +2,38 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!------Links Imports-->
-    <link rel="stylesheet" href="../../css/gobal/global.css">
-    <!------Links Global-->
-    <link rel="stylesheet" href="../../css/header/header.css">
-    <link rel="stylesheet" href="../../css/footer/footer.css">
-    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> 
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-     <!------Links modals-->
-    <link rel="stylesheet" href="../../css/modalsGenal/account.css">
-    <link rel="stylesheet" href="../../css/modalsGenal/carrito.css">
-    <link rel="stylesheet" href="../../css/modalsGenal/liked.css">
-    <link rel="stylesheet" href="../../css/contact/aboutUs.css">
-    <link rel="icon" href="../../media/Assets 1 (Esenciales)/logos (Marca)/logoRiwiShop.png" type="image/x-icon" />
-    
-    <title>About Us and Products</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="../../css/contact/aboutUs.css" />
+    <link rel="stylesheet" href="../../css/header/header.css" />
+    <link rel="stylesheet" href="../../css/footer/footer.css" />
+    <!-- <link rel="stylesheet" href="../../media/Assets 1 (Esenciales)/logos (Marca)/" /> -->
+    <link rel="stylesheet" href="../../css/modalsGenal/account.css" />
+    <link rel="stylesheet" href="../../css/modalsGenal/carrito.css" />
+    <link rel="stylesheet" href="../../css/modalsGenal/liked.css" />
+    <link rel="stylesheet" href="../../css/landing/landing.css" />
+    <link
+      rel="stylesheet"
+      href="../css/aplication/dta/app/shopVCar/shopCarr.css" 
+      />
+      <!-- OJO ESTE ENLACE DE ARRIBA -->
+    <link
+      rel="stylesheet"
+      href="../css/aplication/dta/app/favoriteVList/favoriteList.css"
+    />
+    <!-- OJO ESTE ENLACE DE ARRIBA -->
+    <link
+      rel="icon"
+      href="../../media/Assets 1 (Esenciales)/logos (Marca)/pstñLogo.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../css/aplication/dta/app/g.css" />
+    <title>Sobre nosotros y Productos</title>
+
   </head>
-  <!------Cabecera-->
   <header class="head-v-top">
     <section class="contains-v-top">
       <a href="../../LandingPage.html" class="logo-up-1">
@@ -30,74 +45,84 @@
           <label for="menu-toggle" id="menu-icon">&#9776;</label>
           <div id="menu">
             <ul>
-              <li><a href="../LandingPage.html">Home</a></li>
-              <li><a href="../redirects/shop.html">Shop</a></li>
-              <li>
-                <a href="/redirects/aboutProducts.html">About</a>
-              </li>
-              <li><a href="">Contact</a></li>
+              <li><a href="../../LandingPage.html">Home</a></li>
+              <li><a href="../shopRiwi/shop.html">Shop</a></li>
+              <li><a href="../contact/contact.html">Contac</a></li>
             </ul>
           </div>
         </div>
         <div class="Meta-aRF">
           <a href="../../LandingPage.html">Home</a>
-          <a href="../../redirects/shopRiwi/shop.html">Shop</a>
-          <a href="../contact/AboutUs.html">About</a>
+          <a href="../shopRiwi/shop.html">Shop</a>
           <a href="../contact/contact.html">Contact</a>
         </div>
       </div>
       <div class="icons-top1">
-       <div class="login-but btn-1"><span class="material-symbols-outlined" id="account-js">person</span></div>
-       <div class="corazon-but btn-1"><span class="material-symbols-outlined" id="favorite-js">favorite</span></div> 
-       <div class="shop-bur btn-1"><span class="material-symbols-outlined" id="shopping-js">shopping_cart</span></div</div>
-    </section>
-  </header>
-  
-<!------Cabecera-->
-<!------Cabecera-->
-<!------Cabecera-->
-<!------Cabecera-->
-<section class="account">
-  <div class="Name-tag">
-      <h4>Iniciar sesion</h4>
-  </div>
-  <div class="op-Account">
-      <h5>Ya tienes una cuenta?<br>Inicia sesion</h5>
-  </div>
-  <div class="but-account">
-      <a href="./redirects/login.html"><button class="inicio-RegistrerBut">Iniciar sesion</button></a>
-      <div class="op-moreRegistrer">
-          <p>or <a href="./redirects/login.html">Registrate</a>
-          </p>
+        <div class="login-but btn-1">
+          <span class="material-symbols-outlined">person</span>
+        </div>
+        <div class="corazon-but btn-1">
+          <span class="material-symbols-outlined">favorite</span>
+        </div>
+        <div class="shop-bur btn-1">
+          <span class="material-symbols-outlined">shopping_cart</span>
+        </div>
       </div>
-  </div>
-</section>
-<!------carrito-->
-<!------carrito-->
-<!------carrito-->
-<section class="carrito">
-  <p id="titleModalKart">Shopping Cart</p>
-  <hr class="sep">
-  <div class="Contain-carrito"></div>
-  <section class="subtotal"><p class="palabra-subtotal">Subtotal</p><p class="precio-subtotal">precio</p></section>
-  <section class="botones-carrito"><a href=""><button class="botonsCart cart" id="botonCart">Cart</button></a><a href=""><button class="botonsCart check" id="botonCheckOut">CheckOut</button></a></section>
-</section>
-<!------carrito-->
-<section class="liked">
-  <p id="titleModalFavorite">My likes</p>
-  <hr class="sep">
-  <div class="Contain-liked"></div>
-  <div class="botones-liked">
-      <a href=""><button class="botonsCart cart">Cart</button></a>
-  </div>
-</section>
+    </section>
+    <!------Cabecera-->
+    <!------Cabecera-->
+    <!------Cabecera-->
+    <!------Cabecera-->
+    <section class="account">
+      <div class="Name-tag">
+        <h4>Iniciar sesion</h4>
+      </div>
+      <div class="op-Account">
+        <h5>Ya tienes una cuenta?<br />Inicia sesion</h5>
+      </div>
+      <div class="but-account">
+        <a href="../../PONER-LOGIN"
+          ><button class="inicio-RegistrerBut">Iniciar sesion</button></a
+        >
+        <div class="op-moreRegistrer">
+          <p>or <a href="../../PONER-REGISTER">Registrate</a></p>
+        </div>
+      </div>
+    </section>
+    <!------favoritos-->
+    <section>
+      <div id="modalFavorite" class="modalFavorite">
+        <div class="modal-content-favorite">
+          <!-- <span class="close-modal-favorite" onclick="cerrarModalFavorite()">&times;</span> -->
+          <p id="titleModalFavorite"></p>
+          <br /><br />
+          <hr />
+          <br />
+        </div>
+      </div>
+    </section>
+    <!------favoritos-->
+    <!------carrito-->
+    <section>
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close-modal" onclick="cerrarModal()"></span>
+          <p id="titleModalKart"></p>
+          <br /><br />
+          <hr />
+          <br />
+        </div>
+      </div>
+    </section>
+    <!------carrito-->
+  </header>
 
   <body>
-    <div class="efect">
+    <hr>
       <div class="fondo-cards">
-        <!-- <div class="img-programacion">
+        <div class="img-programacion">
           <img src="../../media/Assests 3 (imgs-about)/programming.png" alt="">
-        </div> -->
+        </div>
         <div class="clip-path-f">
           <div class="container-cards">
             <div class="box-card">
@@ -304,9 +329,9 @@
                 Somos una empresa comprometida con el crecimiento personal, la
                 innovación y la calidad en el sector tecnológico.<br />
                 <br />
-                <!-- <div class="img-riwi1">
+                <div class="img-riwi1">
                   <img src="../../media/Assests 3 (imgs-about)/img-riwi1.webp" alt="">
-                </div> -->
+                </div>
                 En nuestra empresa prima la igualdad y la inclusión, tomamos a
                 cada persona, estudiante, profesor, directivo, empresa, comprador,
                 trabajador de limpieza, etc, como una persona mas, ya que todos
@@ -322,9 +347,9 @@
                 de pago para que nuestros productos sean mas accesibles. <br />
                 <br />
               </p>
-              <!-- <div class="img-riwi2">
+              <div class="img-riwi2">
                 <img src="../../media/Assests 3 (imgs-about)/img-riwi2.png" alt="">
-              </div> -->
+              </div>
             </div>
           </div>
         </article>
@@ -446,9 +471,9 @@
         </div>
       </section>
     </div>
-   <script src="../../js/modals/modal.js" type="module"></script>
-   <script src="../../js/modals/shopCarr.js" type="module"></script>
-   <script src="../../js/modals/favoriteModal.js" type="module"></script>
+    <script src="../js/modales/accountModal.js" type="module"></script>
+    <script src="../js/shoppingCar/shoppingCar.js" type="module"></script>
+    <script src="../../js/modals/favoriteModal.js" type="module"></script>
   </body>
 
   <!------foooter-->
