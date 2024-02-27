@@ -36,7 +36,7 @@
 }
 
 
-.cart {
+.CartGrande {
     display: flex;
     width: 99%;
     justify-content: space-between;
@@ -154,17 +154,6 @@
     align-items: center;
 }
 
-/* .Navegator-text:after {
-    content: "";
-    position: absolute;
-    bottom: 25px;
-    left: 7.4%;
-    width: 2px;
-    height: 40px;
-    background-color: rgba(0, 0, 0, 0.377);
-    display: block;
-} */
-
 .redi-c {
     text-decoration: none;
     color: var(--total);
@@ -208,5 +197,3 @@
 .navar-2 h2 {
     font-size: calc(0.3em + 1vh);
 }
-  
-  
