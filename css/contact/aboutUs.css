@@ -248,12 +248,10 @@ html {
 }
 
 .resto-p{
-  display: flex;
-  text-align: justify;
-  justify-content: center;
-  column-count: 2;
+  text-align: left !important;
+  justify-content: left !important;
   column-gap: 25px;
-  padding-top: 20px;
+  padding-top: 1px;
 }
 
 @media (max-width: 768px) {
