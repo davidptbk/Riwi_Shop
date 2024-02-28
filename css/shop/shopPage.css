@@ -32,6 +32,7 @@
     z-index: -20;
     top: 0;
     left: 0;
+    filter: blur(2px);
     object-position: center center;
 }
 
