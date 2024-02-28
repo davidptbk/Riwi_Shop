@@ -13,7 +13,7 @@
     <!------Links modals-->
     <link rel="stylesheet" href="../../css/modalsGenal/account.css">
     <link rel="stylesheet" href="../../css/modalsGenal/carrito.css">
-    <link rel="stylesheet" href="../../css/modalsGenal/carrito.css">
+    <link rel="stylesheet" href="../../css/modalsGenal/liked.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../../css/landing/landing.css" />
     <link
@@ -24,69 +24,92 @@
     <title>Sobre nosotros y Productos</title>
 
   </head>
-<!------Cabecera-->
-<header class="head-v-top">
-  <section class="contains-v-top">
-      <a href="../../LandingPage.html" class="logo-up-1"> <img
-              src="../../media/Assets 1 (Esenciales)/logos (Marca)/logo2.png"></a>
-      <div class="cpmtains-aC">
-          <div class="Men-AS">
-              <input type="checkbox" id="menu-toggle">
-              <label for="menu-toggle" id="menu-icon">&#9776;</label>
-              <div id="menu">
-                  <ul>
-                      <li><a href="../../LandingPage.html">Home</a></li>
-                      <li><a href="../shopRiwi/shop.html">Shop</a></li>
-                      <li><a href="./contact.html">Contact</a></li>
-                  </ul>
-              </div>
-          </div>
-          <div class="Meta-aRF">
-              <a href="../LandingPage.html" class="link1Home">Home</a>
-              <a href="./redirects/shopRiwi/shop.html" class="link1Shop">Shop</a>
-              <a href="./redirects/contact/contact.html" class="link1acontact">Contact</a>
-          </div>
-      </div>
-      <div class="icons-top1">
-          <div class="login-but btn-1">
-              <span class="material-symbols-outlined" id="account-js">person</span>
-              <p id="idiomaStatus">en</p>
-          </div>
-          <div class="corazon-but btn-1">
-              <span class="material-symbols-outlined" id="favorite-js">favorite</span>
-          </div>
-          <div class="shop-bur btn-1">
-              <span class="material-symbols-outlined" id="shopping-js">shopping_cart</span>
-          </div>
-      </div>
-  </section>
+  <header class="head-v-top">
+    <section class="contains-v-top">
+        <a href="../../LandingPage.html" class="logo-up-1"> <img
+                src="../../media/Assets 1 (Esenciales)/logos (Marca)/logo2.png"></a>
+        <div class="cpmtains-aC">
+            <div class="Men-AS">
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" id="menu-icon">&#9776;</label>
+                <div id="menu">
+                    <ul>
+                        <li><a href="../../LandingPage.html">Home</a></li>
+                        <li><a href="../shopRiwi/shop.html">Shop</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="Meta-aRF">
+                <a href="../../LandingPage.html" class="link1Home">Home</a>
+                <a href="../shopRiwi/shop.html" class="link1Shop">Shop</a>
+                <a href="./contact.html" class="link1acontact">Contact</a>
+            </div>
+        </div>
+        <div class="icons-top1">
+            <div class="login-but btn-1">
+                <span class="material-symbols-outlined" id="account-js">person</span>
+                <p id="idiomaStatus">en</p>
+            </div>
+            <div class="corazon-but btn-1">
+                <span class="material-symbols-outlined" id="favorite-js">favorite</span>
+            </div>
+            <div class="shop-bur btn-1">
+                <span class="material-symbols-outlined" id="shopping-js">shopping_cart</span>
+            </div>
+        </div>
+    </section>
 </header>
-
+<!------Cabecera-->
+<!------Cabecera-->
+<!------Cabecera-->
+<!------Cabecera-->
+<section class="account">
+    <div class="Name-tag">
+        <h4>Log In</h4>
+    </div>
+    <div class="op-Account">
+        <h5>Already have an account?<br></h5>
+    </div>
+    <div class="but-account">
+        <a href="./redirects/login.html"><button class="inicio-RegistrerBut">Login</button></a>
+        <div class="op-moreRegistrer">
+            <p>or <a href="./redirects/login.html">Sing Up</a>
+            </p>
+            <select id="languageSelector">
+                <option   value="es" id="esVal">Español</option>
+                <option  value="en" id="enVal" selected class="active">English</option>
+            </select>
+        </div>  
+        
+    </div>  
+</section>
 <!------carrito-->
 <section class="carrito">
-  <p id="titleModalKart">Shopping Cart</p>
-  <hr class="sep">
-  <div class="Contain-carrito"></div>
-  <section class="subtotal">
-      <p class="palabra-subtotal">Subtotal</p>
-      <p class="precio-subtotal">precio</p>
-  </section>
-  <section class="botones-carrito"><a href="../shopRiwi/cart.html"><button class="botonsCart cart" id="botonCart">Cart</button></a><a
-          href="../shopRiwi/cheking.html"><button class="botonsCart check" id="botonCheckOut">CheckOut</button></a></section>
+    <p id="titleModalKart">Shopping Cart</p>
+    <hr class="sep">
+    <div class="Contain-carrito"></div>
+    <section class="subtotal">
+        <p class="palabra-subtotal">Subtotal</p>
+        <p class="precio-subtotal">precio</p>
+    </section>
+    <section class="botones-carrito"><a href="./redirects/shopRiwi/cart.html"><button class="botonsCart cart" id="botonCart">Cart</button></a><a
+            href="./redirects/shopRiwi/cheking.html"><button class="botonsCart check" id="botonCheckOut">CheckOut</button></a></section>
 </section>
 <!------carrito-->
 <!------liked-->
 <section class="liked">
-  <p id="titleModalFavorite">My likes</p>
-  <div class="Contain-liked"></div>
-  <div class="botones-liked">
-      <a href="../shopRiwi/cart.html"><button class="botonsCart cart" id="botonCart">Cart</button></a>
-  </div>
+    <p id="titleModalFavorite">My likes</p>
+    <hr class="sep">
+    <div class="Contain-liked"></div>
+    <div class="botones-liked">
+        <a href="./redirects/shopRiwi/cart.html"><button class="botonsCart cart" id="botonCart">Cart</button></a>
+    </div>
 </section>
+<!------liked-->
 
   <body>
     <div class="efect">
-    <hr>
     <div class="fondo-cards">
         <div class="clip-path-f">
           <div class="container-cards">
