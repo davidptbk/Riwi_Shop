@@ -44,24 +44,64 @@
     margin: 0 auto;
     padding: 80px;
   }
-  
   .subcuadro {
     margin: 20px;
     width: 50%;
-    height: 400px;
+    height: auto;
     border: 1px solid black;
-    padding: 20px;
   }
-  
   .listaProductos {
-    width: 70%;
-    
+    width: 70%;  
   }
-  
   .cartTotals {
     width: 30%;
-
+    height: 400px;
 }
+
+.td1,
+.td6{
+    width: 1%;
+}
+
+.tr1{
+    font-weight: bold;
+}
+
+.tabla{
+    text-align: center;
+}
+.listaProductos table{
+    margin: 0px auto;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.listaProductos td{
+    margin: 0px auto;
+    border: 1px solid black;
+    padding: 20px
+}
+
+.TablaImagen{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.Basurero{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 760px) {
+    .CartGrande {
+      flex-direction: column;
+    }
+    .listaProductos, .cartTotals {
+      width: 100%;
+    }
+  }
+  
   
 .tex-fot {
     width: 99%;
@@ -77,17 +117,16 @@
     text-align: center;
     z-index: 20;
 }
+
 .flech{
     position: absolute;
     top: -6.2px;
 
 }
 
-
 .tex-fot h1 {
     font-size: 4em;
 }
-
 
 .nav {
     width: 99%;
@@ -108,14 +147,9 @@
     position: relative;
 }
 
-
-
 .redi-c:hover {
     color: var(--color3);
 }
-
-
-
 
 .divMet-2 {
     width: 20%;
