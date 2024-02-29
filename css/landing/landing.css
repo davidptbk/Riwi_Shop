@@ -225,9 +225,9 @@ body {
 
 .slide img {
     width: 100%;
-    height: 120%;
+    height: 100%;
     border-radius: 20px;
-
+    object-fit: contain;
 }
 
 .slides {
