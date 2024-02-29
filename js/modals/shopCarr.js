@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
     // selectores
     const AddToCart = document.querySelectorAll(".boton-opcion");
     const ModalContent = document.querySelector(".Contain-carrito");
@@ -67,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
     
-    function actualizarCarrito(carritoIds) {
+    export function actualizarCarrito(carritoIds) {
         const ModalContent = document.querySelector(".Contain-carrito");
     
         // Limpia el contenido actual del carrito
@@ -77,6 +76,8 @@ document.addEventListener("DOMContentLoaded", function () {
         carritoIds.forEach(producto => {
             agregarIdentificador(producto);
         });
+        const evento = new CustomEvent('carritoActualizado');
+        document.dispatchEvent(evento);
     }
 
     // Función para agregar un producto al carrito
@@ -145,6 +146,10 @@ document.addEventListener("DOMContentLoaded", function () {
         // Filtra el array para no eliminar los demás productos, solo el que se está seleccionando
         carritoIds = carritoIds.filter(producto => producto.id !== id);
 
+        if (!carritoIds) {
+            console.error('carritoIds no tiene nada');
+            return;
+        }
         // Actualiza el localStorage
         localStorage.setItem("carritoIds", JSON.stringify(carritoIds));
 
@@ -154,9 +159,13 @@ document.addEventListener("DOMContentLoaded", function () {
         if (identificadorExistente) {
             ModalContent.removeChild(identificadorExistente);
         }
+        //esto es para conectar el eliminar con el kart
+        const eliminacionGlobal = new CustomEvent('productoEliminado', { detail: carritoIds });
+        document.dispatchEvent(eliminacionGlobal);
 
         // Llama a calcularSubtotal para que se actualice cada vez que se elimina un producto del carrito
         calcularSubtotal();
+        actualizarCarrito(carritoIds);
     }
 
 
@@ -181,4 +190,3 @@ document.addEventListener("DOMContentLoaded", function () {
         // Guardamos el subtotal en localStorage
         localStorage.setItem("subtotal", subtotal);
     }
-});
