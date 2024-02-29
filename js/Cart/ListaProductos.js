@@ -13,10 +13,10 @@ function añadirDataTabla() {
     let data = JSON.parse(localStorage.getItem('carritoIds'));
 
     // seleccionamos la tabla del DOM
-    let table = document.querySelector('.listaProductos table');
+    let tbody = document.querySelector('.tabla-datos');
 
     // limpiamos la tabla antes de añadir las nuevas filas
-    table.innerHTML = '';
+    tbody.innerHTML = '';
   
     // un for each sobre los datos porque es una lista
     for(let i=0; i<data.length; i++) {
@@ -94,7 +94,7 @@ function añadirDataTabla() {
       tr.appendChild(botonEliminar);
   
       // añádimos el tr de ultimas
-      table.appendChild(tr);
+      tbody.appendChild(tr);
       // console.log(data[i].precio, data[i].cantidad);
     }
 

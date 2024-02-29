@@ -25,12 +25,9 @@
 
 
 #titleModalFavorite {
-    width: 99%;
-    height: auto;
     display: flex;
-    justify-content: center;
     padding-top: 12px;
-    font-size: calc(.2em + 1vw);
+    font-size: calc(.2em +1vw);
     font-weight: bolder;
     -webkit-user-select: none;
     -moz-user-select: none;

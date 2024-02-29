@@ -20,6 +20,10 @@
     height: 99%;
     display: flex;
     justify-content: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .Name-tag h4::after {
     content: "";

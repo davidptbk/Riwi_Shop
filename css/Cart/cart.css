@@ -45,6 +45,7 @@
     padding: 80px;
   }
   .subcuadro {
+    overflow: auto;
     margin: 20px;
     width: 50%;
     height: auto;
@@ -56,6 +57,19 @@
   .cartTotals {
     width: 30%;
     height: 400px;
+}
+
+.subcuadro::-webkit-scrollbar {
+    width: 12px;
+}
+
+.subcuadro::-webkit-scrollbar-thumb {
+    background-color: #6B5CFF;
+    border-radius: 5px;
+}
+
+.subcuadro::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0)
 }
 
 .td1,
@@ -96,12 +110,23 @@
 @media screen and (max-width: 760px) {
     .CartGrande {
       flex-direction: column;
+      padding: 0px;
+      align-items: center;
     }
     .listaProductos, .cartTotals {
-      width: 100%;
+      width: 95%;
     }
-  }
-  
+    .Navegator-text img{
+        margin: 0;
+        padding: 0;
+        left: unset;
+    }
+    .Navegator-text{
+        height: 20vh;
+        left: unset;
+        width: 98%;
+    }
+}
   
 .tex-fot {
     width: 99%;
