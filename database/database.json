@@ -33,6 +33,28 @@
       "region": "Soltero",
       "city": "No",
       "password": "123456"
+    },
+    {
+      "id": "1f7d",
+      "names": "David Alejandro",
+      "lastNames": "Franco Salazar",
+      "email": "admin@google.com",
+      "cellPhone": "3507993311",
+      "address": "Carrera 62#61-38",
+      "region": "Antioquia",
+      "city": "Bello",
+      "password": "123456"
+    },
+    {
+      "id": "113b",
+      "names": "Alejandro",
+      "lastNames": "Perez",
+      "email": "aleja@gmail.com",
+      "cellPhone": "3507993311",
+      "address": "Carrera 62#61-38",
+      "region": "Antioquia",
+      "city": "Bello",
+      "password": "123456"
     }
   ],
   "products": [
