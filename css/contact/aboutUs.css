@@ -248,12 +248,10 @@ html {
 }
 
 .resto-p{
-  display: flex;
-  text-align: justify;
-  justify-content: center;
-  column-count: 2;
+  text-align: left !important;
+  justify-content: left !important;
   column-gap: 25px;
-  padding-top: 20px;
+  padding-top: 1px;
 }
 
 @media (max-width: 768px) {
@@ -573,12 +571,27 @@ html {
   }
 }
 
-
-
-
-
 *{
   animation-name: op;
+}
+
+.Name-tag h4::after {
+  content: "";
+  position: absolute;
+  top: 45px !important;
+  left:12%;
+  width: 210px;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.532);
+  display: block;
+}
+
+.account{
+  margin: 5px !important;
+}
+
+.total-modals{
+  margin: 5px !important;
 }
 
 @keyframes op{
@@ -599,4 +612,10 @@ body::-webkit-scrollbar-thumb{
 }
 body::-webkit-scrollbar-track{
   background-color: rgba(255, 255, 255, 0)
+}
+
+#idiomaStatus {
+  position: relative;
+  top: 20px;
+  right: 25px !important;
 }

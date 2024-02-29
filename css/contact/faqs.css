@@ -3,7 +3,7 @@
     font-family: "Poppins", sans-serif;
   }
   
-  body {
+  .contenedor-grande {
     font-family: "Poppins", sans-serif;
     display: flex;
     justify-content: center;
@@ -111,11 +111,14 @@
   
   .textareaForm {
     width: 100%;
+    text-align: center;
+    padding-top: 30px;
   }
   
   .textareaForm p{
     width: 90%;
-    text-align: center;
+    text-align: center !important;
+    justify-content: center;
     margin: 6%;
   }
   
@@ -131,8 +134,8 @@
   
   .textareaForm .textarea-content::placeholder{
     font-weight: 600;
-    text-align: center;
-    padding-top: 100px;
+    text-align: center !important;
+    padding-top: 80px;
   }
   
   .enviar-button{
