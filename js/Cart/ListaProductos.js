@@ -9,7 +9,7 @@ document.addEventListener('productoEliminado', function(e) {
 });
 
 function añadirDataTabla() {
-    // cogemos los datos del local storage
+    // cojemos los datos del local storage
     let data = JSON.parse(localStorage.getItem('carritoIds'));
 
     // seleccionamos la tabla del DOM
@@ -77,15 +77,29 @@ function añadirDataTabla() {
       Cantidad.appendChild(botonMas);
 
       let MultSubtotal = document.createElement('td');
-      MultSubtotal.textContent = precio * cantidad;
+      let subtotal = precio * cantidad;
+      let subtotalconpuntos = subtotal.toLocaleString('de-DE');
+      MultSubtotal.textContent = subtotalconpuntos;
+
   
       let botonEliminar = document.createElement('td');
       let img2 = document.createElement('img');
       img2.className = 'Basurero'
       img2.src = "../../media/Assets 2 (package)/iconsCart/basurero.png";
       botonEliminar.appendChild(img2);
+
+      botonEliminar.addEventListener('click', function(){
+        // eliminamos el producto de la lista de datos del local storage
+        data.splice(i, 1);
+
+        // actualizamos el local storage
+        localStorage.setItem('carritoIds', JSON.stringify(data));
+
+        // actualizamos el carrito
+      actualizarCarrito(data);
+      })
   
-      // Añade los elementos td al elemento tr
+      // añade los elementos td al elemento tr
       tr.appendChild(tablaimg);
       tr.appendChild(producto);
       tr.appendChild(tablaPrecio);
@@ -93,7 +107,7 @@ function añadirDataTabla() {
       tr.appendChild(MultSubtotal);
       tr.appendChild(botonEliminar);
   
-      // añádimos el tr de ultimas
+      // añadimos el tr de ultimas
       tbody.appendChild(tr);
       // console.log(data[i].precio, data[i].cantidad);
     }
