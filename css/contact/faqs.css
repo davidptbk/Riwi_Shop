@@ -263,17 +263,16 @@ height: 80%;
 display: flex;
 justify-content: center;@media (max-width: 768px) {
   #tipo-de-pqr {
-    width: 40%; /* Aumenta el ancho para tablets */
-    font-size: 14px; /* Ajusta el tamaño del texto si es necesario */
+    width: 40%;
+    font-size: 14px; 
   }
 }
 
-/* Estilos responsive para móviles */
 @media (max-width: 480px) {
   #tipo-de-pqr {
-    width: 60%; /* Aumenta el ancho para móviles */
-    font-size: 12px; /* Ajusta el tamaño del texto si es necesario */
-    padding: 10px 0; /* Agrega relleno para hacerlo más alto si es necesario */
+    width: 60%;
+    font-size: 12px; 
+    padding: 10px 0; 
   }
 }
 align-items: center;
