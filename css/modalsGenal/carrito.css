@@ -280,3 +280,13 @@
     }
 
 }
+
+@media (max-width: 600px) {
+
+    .carrito {
+        right: unset;
+        width: 95%;
+        padding: 0px;
+        justify-content: center;
+    }
+}

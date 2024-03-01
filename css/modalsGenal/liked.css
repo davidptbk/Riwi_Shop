@@ -97,9 +97,13 @@
     .liked {
         right: 20%;
     }
+}
 
+@media (max-width: 600px) {
 
-
-
-
+    .liked {
+        right: unset;
+        width: 95%;
+        padding: 0px;
+    }
 }
