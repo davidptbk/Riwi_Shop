@@ -45,7 +45,6 @@ body {
     display: flex;
     width: 99%;
     justify-content: space-between;
-    border: 1px solid black;
     margin: 0 auto;
     padding: 80px;
   }
@@ -54,14 +53,15 @@ body {
     margin: 20px;
     width: 50%;
     height: auto;
-    border: 1px solid black;
   }
   .listaProductos {
+    font-size: large;
     width: 70%;  
   }
   .cartTotals {
     width: 30%;
     height: 400px;
+    background-color:rgb(241,239,255);
 }
 
 .subcuadro::-webkit-scrollbar {
@@ -84,6 +84,7 @@ body {
 
 .tr1{
     font-weight: bold;
+    background-color: rgb(241,239,255);
 }
 
 .tabla{
@@ -97,7 +98,6 @@ body {
 
 .listaProductos td{
     margin: 0px auto;
-    border: 1px solid black;
     padding: 20px
 }
 
@@ -117,7 +117,6 @@ body {
     margin: 0;
     width: 100%;
     height: 25%;
-    border: 1px solid black;
     font-size: 35px;
     font-weight: bolder;
     justify-content: center;
@@ -128,22 +127,61 @@ body {
     margin: 0;
     width: 100%;  
     height: 40%;
-    border: 1px solid black;
 }
 
 .subtotalMini{
+    padding: 30px;
     display: flex;
     margin: 0;
     width: 100%;  
     height: 50%;
-    border: 1px solid black;
+}
+
+.subtotalMiniText{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0;
+    width: 50%;
+    height: 100%;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.subtotalMiniPrice{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0;
+    width: 50%;
+    height: 100%;
 }
 .totalMini{
+    padding: 30px;
     display: flex;
     margin: 0;
     width: 100%;  
     height: 50%;
-    border: 1px solid black;
+}
+
+.totalMiniText{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0;
+    width: 50%;
+    height: 100%;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.totalMiniPrice{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0;
+    width: 50%;
+    height: 100%;
 }
 
 .checkoutButton {
@@ -151,7 +189,6 @@ body {
     margin: 0;
     width: 100%;
     height: 35%;
-    border: 1px solid black;
     font-weight: lighter;
     justify-content: center;
     align-items: center;
@@ -164,14 +201,71 @@ body {
     display: flex;
     padding: 18px;
     justify-content: center;
-    border: 2px solid var(--color3);
+    border: 2px solid black;
+    color: black;
 }
 
 .checkoutButoonYess:hover {
+    border: 2px solid var(--color3);;
     background-color: var(--color3);
     color: white;
     cursor: pointer;
 }
+
+.checkoutButoonYess {
+    text-decoration: none;
+}
+
+.botonMas{
+    font-size: larger;
+    font-weight: bolder;
+    width: 25px;
+    height: 25px;
+    border-radius: 100px;
+    border: 2px solid black;
+    color: black;
+}
+
+.botonMas:hover {
+    border: 2px solid var(--color3);;
+    background-color: var(--color3);
+    color: white;
+    cursor: pointer;
+}
+
+.botonMenos{
+    font-size: larger;
+    font-weight: bolder;
+    width: 25px;
+    height: 25px;
+    border-radius: 100px;
+    border: 2px solid black;
+    color: black;
+}
+
+.botonMenos:hover {
+    border: 2px solid var(--color3);;
+    background-color: var(--color3);
+    color: white;
+    cursor: pointer;
+}
+
+.sumaDeTodosLosSubTotales{
+    font-weight: bolder;
+}
+
+.totalMiniPrice{
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+.precioProducto,
+.NombreProducto,
+.subtotalMiniPrice{
+    font-weight: lighter;
+    color: rgb(137,137,137);
+}
+
   
 .tex-fot {
     width: 99%;
@@ -251,6 +345,11 @@ body {
 }
 
 @media screen and (max-width: 760px) {
+    .botonMas,
+    .botonMenos{
+        max-width: 20px;
+        width: 20px;
+    }
     .CartGrande {
       flex-direction: column;
       padding: 0px;

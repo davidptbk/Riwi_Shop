@@ -6,6 +6,7 @@ document.addEventListener('productoEliminado', function(e) {
 
   // llamamos la funcion importada para actualizar la tabla
   actualizarCarrito(carritoIds);
+  actualizarSubtotal();
 });
 
 function añadirDataTabla() {
@@ -34,18 +35,22 @@ function añadirDataTabla() {
       tablaimg.appendChild(img);
 
       let producto = document.createElement('td');
+      producto.className = 'NombreProducto'
       producto.textContent = data[i].nombre;
   
       let tablaPrecio = document.createElement('td');
+      tablaPrecio.className = 'precioProducto' 
       tablaPrecio.textContent = data[i].precio;
   
       let Cantidad = document.createElement('td');
 
       // para hacer una funcion de aumentar o disminuir la cantidad de un producto añadimos botones
       let botonMas = document.createElement('button');
+      botonMas.className = 'botonMas';
       botonMas.textContent = '+';
 
       let botonMenos = document.createElement('button');
+      botonMenos.className = 'botonMenos';
       botonMenos.textContent = '-';
 
       // creamos un nodo para el numero de cantidad
@@ -58,6 +63,7 @@ function añadirDataTabla() {
         MultSubtotal.textContent = precio * data[i].cantidad;
         localStorage.setItem('carritoIds', JSON.stringify(data));
         actualizarCarrito(data);
+        actualizarSubtotal();
       });
 
       //y aqui se disminuye
@@ -69,6 +75,7 @@ function añadirDataTabla() {
           localStorage.setItem('carritoIds', JSON.stringify(data));
         }
         actualizarCarrito(data);
+        actualizarSubtotal();
       });
 
       // ponemos los botones al DOM
@@ -77,6 +84,7 @@ function añadirDataTabla() {
       Cantidad.appendChild(botonMas);
 
       let MultSubtotal = document.createElement('td');
+      MultSubtotal.className = 'sumaDeTodosLosSubTotales';
       let subtotal = precio * cantidad;
       let subtotalconpuntos = subtotal.toLocaleString('de-DE');
       MultSubtotal.textContent = subtotalconpuntos;
@@ -97,6 +105,7 @@ function añadirDataTabla() {
 
         // actualizamos el carrito
       actualizarCarrito(data);
+      actualizarSubtotal();
       })
   
       // añade los elementos td al elemento tr
@@ -118,6 +127,34 @@ function añadirDataTabla() {
   
   // invocamos la funcion
   añadirDataTabla();
+
+   function actualizarSubtotal() {
+    // cojemos todos los elementos subtotal de la tabla
+    let subtotales = document.querySelectorAll('.sumaDeTodosLosSubTotales');
+  
+    // el numero empezara en 0
+    let sumaTotal = 0;
+  
+    // for each por toda la tabla para ir sumando todo
+    subtotales.forEach(function(subtotal) {
+      let numero = subtotal.textContent.replace(/\./g, '');
+      sumaTotal += Number(numero);
+    });
+  
+    // y ponemos el resultado en el contendeor correcto
+    let contenedor = document.querySelector('.subtotalMiniPrice');
+    contenedor.textContent = sumaTotal.toLocaleString('de-DE');
+
+    // ahora sumamos un 19% de iva para el total
+    let iva = sumaTotal * 0.19;
+
+    // y lo ponemos en el otro contenedor
+    let contenedorTotal = document.querySelector('.totalMiniPrice');
+    contenedorTotal.textContent = (sumaTotal + iva).toLocaleString('de-DE');
+  }
+  actualizarSubtotal();
+  
+  
 
 
   
