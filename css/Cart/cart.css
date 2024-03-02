@@ -252,11 +252,13 @@ body {
 
 .sumaDeTodosLosSubTotales{
     font-weight: bolder;
+    color: #181e4b;
 }
 
 .totalMiniPrice{
     font-weight: bolder;
     font-size: x-large;
+    color: #181e4b;
 }
 
 .precioProducto,
