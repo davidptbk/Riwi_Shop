@@ -18,6 +18,7 @@
 body {
     font-family: var(--font1);
     z-index: -20;
+    overflow-x: hidden;
 }
 
 .carrus-1tb {
@@ -419,14 +420,6 @@ body {
     justify-content: center;
     flex-wrap: wrap;
 }
-
-
-
-
-
-
-
-
 
 .btm-more {
     width: 100%;
