@@ -1,15 +1,17 @@
 
 
 #filter-categories{
+    position: absolute;
     font-family: "Poppins", sans-serif;
     display: none;
     border: 2px solid black;
     border-radius: 10px;
-    width: 170% !important;
+    width: 15% !important;
     text-align: center;
     cursor: pointer;
     color: black;
-    margin-left: 30px;
+    margin-top: 70px;
+    left: 10px;
 }
 
 #filter-categories hr{
@@ -33,13 +35,14 @@
 .icon-met{
     position: absolute;
     left: 1.5%;
+    color: white;
 }
 
 .divMet-2{
     margin-bottom: 35px;
 }
 
-.busqueda-container {
+.busqueda-content {
     display: flex;
     justify-content: center;
     margin-top: 20px;
@@ -52,7 +55,7 @@
     border-radius: 18px;
     font-size: 16px;
     background-color: #fff;
-    background-image: url('../../../media/ass-v1/public/img-buscador.png'); 
+    background-image: url('../../../media/public\ \(Imagenes\ no\ permanentes\)/img-buscador.png'); 
     background-position: 10px 6px;
     background-repeat: no-repeat;
 }
