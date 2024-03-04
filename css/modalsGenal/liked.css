@@ -25,12 +25,9 @@
 
 
 #titleModalFavorite {
-    width: 99%;
-    height: auto;
     display: flex;
-    justify-content: center;
     padding-top: 12px;
-    font-size: calc(.2em + 1vw);
+    font-size: calc(.2em +1vw);
     font-weight: bolder;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -100,9 +97,13 @@
     .liked {
         right: 20%;
     }
+}
 
+@media (max-width: 600px) {
 
-
-
-
+    .liked {
+        right: unset;
+        width: 95%;
+        padding: 0px;
+    }
 }

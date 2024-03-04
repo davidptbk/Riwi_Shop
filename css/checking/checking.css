@@ -1,0 +1,285 @@
+#shopping-js{
+    display: none;
+}
+.checking {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.data-comp {
+    width: 50%;
+    height: auto;
+    padding: 50px;
+}
+
+.titleSecCheking {
+    font-size: calc(1em + 1vw);
+    text-align: start;
+    margin-left: 105px;
+}
+
+#formCheking {
+    width: 100%;
+    padding: 0 90px;
+    height: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#formCheking input {
+    width: 80%;
+    height: 60px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.482);
+    padding-left: 20px;
+}
+
+#formCheking label {
+    font-weight: bolder;
+}
+
+#contry {
+    width: 80%;
+    height: 60px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.482);
+    padding-left: 20px;
+}
+
+.product-inf-check {
+    width: 48%;
+    height: 900px;
+    padding: 80px 20px;
+}
+
+#productoTitulo {
+    display: flex;
+    margin-left: -125px;
+}
+
+#subtotalTitulo {
+    display: flex;
+    margin-right: -8px;
+}
+
+#nombreProducto {
+    display: flex;
+    margin-left: -112px;
+    align-items: center;
+}
+
+#subtotalTITULO2 {
+    display: flex;
+    margin-left: -112px;
+}
+
+#totalTitulo {
+    display: flex;
+    margin-left: -112px;
+}
+
+.inf-check {
+    padding: 0 130px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.inf-check h4 {
+    font-size: calc(0.5em + 1vw);
+}
+
+.produc-infoCheck {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.totalChek {
+    padding: 0 120px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.totalityChek {
+    padding: 0 120px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-check {
+    font-size: calc(1em + 1vw);
+    color: var(--color3);
+}
+
+.method-page {
+    font-size: 20px;
+    width: 100%;
+    height: 340px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 80px 0px 0px;
+}
+
+.op1 {
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+
+.presect {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: black;
+}
+
+#directBankTransfer {
+    color: rgba(0, 0, 0, 0.362) !important;
+}
+
+#cashDelivery {
+    color: rgba(0, 0, 0, 0.263);
+}
+
+.infoPage {
+    font-size: calc(0.1em + 1vw);
+    color: rgba(0, 0, 0, 0.273);
+}
+
+.changeBuy {
+    width: 80%;
+    padding: 20px;
+    font-size: 2em;
+    border: 1px solid black;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.changeBuy:hover {
+    background-color: var(--color3);
+    color: white;
+    border: 1px solid var(--color3);
+}
+
+
+
+.butBuy {
+    width: 100%;
+    height: auto;
+    margin-top: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hrpago{
+    width: 84%;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+@media (max-width: 1062px) {
+
+    .data-comp {
+        width: 100%;
+        padding: 0px;
+    }
+
+    .product-inf-check {
+        width: 100%;
+
+    }
+}
+
+.tabla-datos {
+    width: 100%;
+    border-collapse: collapse;
+    margin-right: 120px;
+}
+
+.tabla-datos td {
+    width: 50%;
+    padding-bottom: 15px;
+}
+
+.encabezado-producto {
+    padding-bottom: 20px;
+    text-align: left;
+    font-size: x-large;
+}
+
+.celdaNombre{
+    font-weight: lighter;
+    color: rgba(0, 0, 0, 0.515);
+}
+.encabezado-subtotal {
+    padding-bottom: 20px;
+    text-align: right;
+    font-size: x-large;
+}
+
+.celda-precio{
+    text-align: right;
+}
+
+@media screen and (max-width: 760px) {
+    .checking {
+        width: 100%;
+        padding: unset;
+        justify-content: center;
+        align-items: center;
+    }
+    .data-comp {
+        width: 100%;
+        padding: unset;
+    }
+    #formCheking {
+    justify-content: center;
+    width: 90%;
+    padding: 0px;
+}
+
+#formCheking input {
+    width: 100%;
+}
+
+.titleSecCheking {
+    font-size: calc(1.4em + 1vw);
+    text-align: center;
+    margin-left: 0px;
+}
+
+.tabla-datos{
+    margin-right: 0px;
+    width: 90%;
+}
+.subtotalPrecioSuma{
+    margin-left: 150px;
+}
+.price-check{
+    margin-left: 180px;
+}
+.method-page{
+    padding: 0px 0px 0px 0px;
+}
+.infoPage{
+    font-size: 18px;
+}
+.butBuy{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+}

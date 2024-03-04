@@ -2,11 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!------Links Imports-->
     <link rel="stylesheet" href="../../css/gobal/global.css">
     <!------Links Global-->
     <link rel="stylesheet" href="../../css/landing/landing.css">
     <link rel="stylesheet" href="../../css/header/header.css">
+    <link rel="stylesheet" href="../../css/Cart/cart.css">
+    <link rel="stylesheet" href="../../css/CuadroHighQuality/HighQuality.css">
     <link rel="stylesheet" href="../../css/footer/footer.css">
     <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -14,14 +18,9 @@
     <link rel="stylesheet" href="../../css/modalsGenal/account.css">
     <link rel="stylesheet" href="../../css/modalsGenal/carrito.css">
     <link rel="stylesheet" href="../../css/modalsGenal/liked.css">
-    <link rel="stylesheet" href="../../css/Cart/cart.css">
     <link rel="icon" href="../../media/Assets 1 (Esenciales)/logos (Marca)/logoRiwiShop.png" type="image/x-icon" />
     <!---more Styles-->
-    <link rel="stylesheet" href="../../css/shop/filterBuscar/filBus.css">
 
-
-
-    <link rel="stylesheet" href="../../css/aplication/shop-filter-search/styles.css"/>
     <title>Cart Riwi</title>
   </head>
   <!------Cabecera-->
@@ -85,8 +84,17 @@
   <p id="titleModalKart">Shopping Cart</p>
   <hr class="sep">
   <div class="Contain-carrito"></div>
-  <section class="subtotal"><p class="palabra-subtotal">Subtotal</p><p class="precio-subtotal">precio</p></section>
-  <section class="botones-carrito"><a href=""><button class="botonsCart cart" id="botonCart">Cart</button></a><a href=""><button class="botonsCart check" id="botonCheckOut">CheckOut</button></a></section>
+  <section class="subtotal">
+    <p class="palabra-subtotal">Subtotal</p>
+    <p class="precio-subtotal">precio</p></section>
+  <section class="botones-carrito">
+    <a href="../../redirects/shopRiwi/cart.html">
+      <button class="botonsCart cart" id="botonCart">Cart</button>
+    </a>
+    <a href="../../redirects/shopRiwi/cheking.html">
+      <button class="botonsCart check" id="botonCheckOut">CheckOut</button>
+    </a>
+  </section>
 </section>
 <!------carrito-->
 <section class="liked">
@@ -94,7 +102,7 @@
   <hr class="sep">
   <div class="Contain-liked"></div>
   <div class="botones-liked">
-      <a href=""><button class="botonsCart cart">Cart</button></a>
+      <a href="../../redirects/shopRiwi/cart.html"><button class="botonsCart cart">Cart</button></a>
   </div>
 </section>
   <body>
@@ -114,10 +122,40 @@
           </div>
         </div>
 
-    <div class="cart">
-      <div class="subcuadro listaProductos">Contenido Izquierda</div>
-        <div class="subcuadro cartTotals">Contenido Derecha</div>
+    <div class="CartGrande">
+      <div class="subcuadro listaProductos">
+        <table class="tabla">
+          <tr class="tr1">
+            <td class="td1"></td>
+            <td>Product</td>
+            <td>Price</td>
+            <td>Quantity</td>
+            <td>Subtotal</td>
+            <td class="td6"></td>
+          </tr>
+          <tbody class="tabla-datos">
+          </tbody>
+        </table>
+      </div>
+        <div class="subcuadro cartTotals">
+          <div class="cartTotalsTitle">Cart Totals</div>
+          <div class="subtotalCartTotals">
+            <div class="subtotalMini">
+              <div class="subtotalMiniText">Subtotal</div>
+              <div class="subtotalMiniPrice"></div>
+            </div>
+            <div class="totalMini">
+              <div class="totalMiniText">Total</div>
+              <div class="totalMiniPrice"></div>
+            </div>
+          </div>
+          <div class="checkoutButton">
+            <a href="../../redirects/shopRiwi/cheking.html" class="checkoutButoonYess">Check Out</a>
+          </div>
+        </div>
     </div>
+
+    <!-- Cuadro high quality -->
 
     <div class="cuadro-seguridad">
       <div class="cuadro">
@@ -149,12 +187,16 @@
         </div>
       </div>
     </div>
+  </div>
+  
+  <!-- Cuadro high quality -->
     
     
         
     <script src="../../js/modals/modal.js" type="module"></script>
     <script src="../../js/modals/shopCarr.js" type="module"></script>
     <script src="../../js/modals/favoriteModal.js" type="module"></script>
+    <script src="../../js/Cart/ListaProductos.js" type="module"></script>
   </body>
   <!------foooter-->
   <footer>

@@ -12,6 +12,11 @@
     --color7: rgb(241, 239, 255);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+body {
+    font-family: var(--font1), sans-serif;
+}
 
 .Navegator-text {
     width: 99%;
@@ -36,85 +41,234 @@
 }
 
 
-.cart {
+.CartGrande {
     display: flex;
     width: 99%;
     justify-content: space-between;
-    border: 1px solid black;
     margin: 0 auto;
     padding: 80px;
   }
-  
   .subcuadro {
+    overflow: auto;
     margin: 20px;
     width: 50%;
-    height: 400px;
-    border: 1px solid black;
-    padding: 20px;
+    height: auto;
   }
-  
   .listaProductos {
-    width: 70%;
-    
+    font-size: large;
+    width: 70%;  
   }
-  
   .cartTotals {
     width: 30%;
-
+    height: 400px;
+    background-color:rgb(241,239,255);
 }
-  
-.cuadro-seguridad {
-    display: flex;
+
+.subcuadro::-webkit-scrollbar {
+    width: 12px;
+}
+
+.subcuadro::-webkit-scrollbar-thumb {
+    background-color: #6B5CFF;
+    border-radius: 5px;
+}
+
+.subcuadro::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0)
+}
+
+.td1,
+.td6{
+    width: 1%;
+}
+
+.tr1{
+    font-weight: bold;
     background-color: rgb(241,239,255);
-    width: 99%;
-    height: 210px;
-    padding: 50px;
+}
+
+.tabla{
+    text-align: center;
+}
+.listaProductos table{
     margin: 0px auto;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.listaProductos td{
+    margin: 0px auto;
+    padding: 20px
+}
+
+.TablaImagen{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.Basurero{
+    cursor: pointer;
+}
+
+.cartTotalsTitle {
+    display: flex;
+    margin: 0;
+    width: 100%;
+    height: 25%;
+    font-size: 35px;
+    font-weight: bolder;
+    justify-content: center;
     align-items: center;
 }
-  
-.cuadro {
+
+.subtotalCartTotals {
     margin: 0;
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    height: 75%;
-}
-  
-.calificativo {
-    margin: 0;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+    width: 100%;  
+    height: 40%;
 }
 
-.titulo {
-    margin: 0;
-    flex: 1;
-    align-items: flex-end;
+.subtotalMini{
+    padding: 30px;
     display: flex;
+    margin: 0;
+    width: 100%;  
+    height: 50%;
+}
+
+.subtotalMiniText{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0;
+    width: 50%;
+    height: 100%;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.subtotalMiniPrice{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0;
+    width: 50%;
+    height: 100%;
+}
+.totalMini{
+    padding: 30px;
+    display: flex;
+    margin: 0;
+    width: 100%;  
+    height: 50%;
+}
+
+.totalMiniText{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0;
+    width: 50%;
+    height: 100%;
     font-weight: bolder;
     font-size: larger;
 }
 
-.descripcion {
-    margin: 0;
-    flex: 1;
-    align-items: flex-end;
+.totalMiniPrice{
+    justify-content: center;
+    align-items: center;
     display: flex;
-    font-size: medium;
+    margin: 0;
+    width: 50%;
+    height: 100%;
+}
+
+.checkoutButton {
+    display: flex;
+    margin: 0;
+    width: 100%;
+    height: 35%;
+    font-weight: lighter;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkoutButoonYess{
+    font-size: 22px;
+    width: 200px;
+    border-radius: 15px;
+    display: flex;
+    padding: 18px;
+    justify-content: center;
+    border: 2px solid black;
+    color: black;
+}
+
+.checkoutButoonYess:hover {
+    border: 2px solid var(--color3);;
+    background-color: var(--color3);
+    color: white;
+    cursor: pointer;
+}
+
+.checkoutButoonYess {
+    text-decoration: none;
+}
+
+.botonMas{
+    font-size: larger;
+    font-weight: bolder;
+    width: 25px;
+    height: 25px;
+    border-radius: 100px;
+    border: 2px solid black;
+    color: black;
+}
+
+.botonMas:hover {
+    border: 2px solid var(--color3);;
+    background-color: var(--color3);
+    color: white;
+    cursor: pointer;
+}
+
+.botonMenos{
+    font-size: larger;
+    font-weight: bolder;
+    width: 25px;
+    height: 25px;
+    border-radius: 100px;
+    border: 2px solid black;
+    color: black;
+}
+
+.botonMenos:hover {
+    border: 2px solid var(--color3);;
+    background-color: var(--color3);
+    color: white;
+    cursor: pointer;
+}
+
+.sumaDeTodosLosSubTotales{
+    font-weight: bolder;
+    color: #181e4b;
+}
+
+.totalMiniPrice{
+    font-weight: bolder;
+    font-size: x-large;
+    color: #181e4b;
+}
+
+.precioProducto,
+.NombreProducto,
+.subtotalMiniPrice{
+    font-weight: lighter;
     color: rgb(137,137,137);
 }
 
-.imagen{
-    width: 20%;
-    height: auto;
-    object-fit: contain;
-}
   
-  
-  
-
 .tex-fot {
     width: 99%;
     height: 80%;
@@ -129,17 +283,16 @@
     text-align: center;
     z-index: 20;
 }
+
 .flech{
     position: absolute;
     top: -6.2px;
 
 }
 
-
 .tex-fot h1 {
     font-size: 4em;
 }
-
 
 .nav {
     width: 99%;
@@ -154,31 +307,15 @@
     align-items: center;
 }
 
-/* .Navegator-text:after {
-    content: "";
-    position: absolute;
-    bottom: 25px;
-    left: 7.4%;
-    width: 2px;
-    height: 40px;
-    background-color: rgba(0, 0, 0, 0.377);
-    display: block;
-} */
-
 .redi-c {
     text-decoration: none;
     color: var(--total);
     position: relative;
 }
 
-
-
 .redi-c:hover {
     color: var(--color3);
 }
-
-
-
 
 .divMet-2 {
     width: 20%;
@@ -208,5 +345,29 @@
 .navar-2 h2 {
     font-size: calc(0.3em + 1vh);
 }
-  
-  
+
+@media screen and (max-width: 760px) {
+    .botonMas,
+    .botonMenos{
+        max-width: 20px;
+        width: 20px;
+    }
+    .CartGrande {
+      flex-direction: column;
+      padding: 0px;
+      align-items: center;
+    }
+    .listaProductos, .cartTotals {
+      width: 95%;
+    }
+    .Navegator-text img{
+        margin: 0;
+        padding: 0;
+        left: unset;
+    }
+    .Navegator-text{
+        height: 20vh;
+        left: unset;
+        width: 98%;
+    }
+}
