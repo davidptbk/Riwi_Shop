@@ -275,3 +275,53 @@ header {
     text-decoration: none;
     color: #000000;
 }
+
+.menu-horizontal{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-horizontal > li > a{
+    display: block;
+    padding: 15px 20px;
+    color: #000000;
+}
+
+.menu-horizontal > li:hover{
+    background-color: red;
+}
+
+#menu, .menu-vertical{
+
+    position: absolute; /* Asegurándonos de que no es 'static' */
+    z-index: 100; /* Un valor positivo y mayor que el de la imagen */
+    /* Otros estilos */
+
+    
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: #000000;
+    z-index: 1000 !important;
+}
+
+.menu-horizontal li:hover .menu-vertical{
+    display: block;
+    z-index: 100000 !important;
+}
+
+.menu-vertical li:hover{
+  background-color: #000000;
+}
+
+.menu-vertical li a{
+    display: block;
+    color: white;
+    padding: 15px 15px 15px 20px;
+} 
+
+.Meta-aRF{
+    max-width: 900px;
+    margin: auto;
+}
