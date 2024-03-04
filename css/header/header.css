@@ -292,23 +292,18 @@ header {
     background-color: red;
 }
 
-#menu, .menu-vertical{
+.menu-vertical{
 
-    position: absolute; /* Asegurándonos de que no es 'static' */
-    z-index: 100; /* Un valor positivo y mayor que el de la imagen */
-    /* Otros estilos */
-
-    
+    position: absolute; 
     display: none;
     list-style: none;
     width: 200px;
     background-color: #000000;
-    z-index: 1000 !important;
+    z-index: 1000;
 }
 
 .menu-horizontal li:hover .menu-vertical{
     display: block;
-    z-index: 100000 !important;
 }
 
 .menu-vertical li:hover{
@@ -325,3 +320,9 @@ header {
     max-width: 900px;
     margin: auto;
 }
+
+header, .head-v-top {
+    position: relative; 
+    z-index: 100; /* Asegurándonos de que el header tenga un z-index más alto que la imagen */
+}
+
