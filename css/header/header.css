@@ -345,7 +345,7 @@ header, .head-v-top {
 }
 
 .menu-vertical {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.6);
     border-radius: 5px;
     border: 1px solid black;
 }
