@@ -162,7 +162,7 @@ function categoryManager(){
 </table>
     `;
 
-  infoModalCategory(containerModal);
+  infoModalProduct(containerModal);
 }
 /** 
  Organiza la informacion de los productos existentes en una tabla, con botones de accion como editar y eliminar
@@ -358,6 +358,6 @@ function postProduct(){
     "features": {}
   }
 
-  post(URL_Products,newProduct)
+  //post(URL_Products,newProduct)
 
 }

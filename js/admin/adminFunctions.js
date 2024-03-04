@@ -99,35 +99,83 @@ export function infoModalUser(contenedor){
 
 }
 
-export function captureData(inputs){
+export async function captureData(inputs){
     const data = {}
-    inputs.forEach( element=> {
-    const idInput = element.getAttribute("id")
-    console.log(idInput);
-    if(!idInput.includes("id")){
-        if (idInput == "images"){
-            handleFiles();
-            console.log("entre");
-        }
-
-        if (element.value == "" || element.value == null){
-            return console.error(`Campo ${idInput} se encuentra vacio`)        
-        }
-
+    const arrayURL = [];
+    //inputs es una lista, lo que hace el foreach es recorrerlo y difereciarlo dependiendo su id --Funcion con mejora
+    inputs.forEach( async element=> {
+        //Se almacena en idInput, el id de la etiqueta input 
+        const idInput = element.getAttribute("id")
+        console.log(idInput);
+        //Se mira los inputs que tengan el atributo id
+        if(!idInput.includes("id")){
+            if (idInput == "images"){
+                //Variable creada para guardar un recorrido de un objeto y sea mas facil su lectura
+                const arrayImages = element.files;
         
+                for (let index = 0; index < arrayImages.length; index++) 
+                {
+                    //La funcion handleFiles obtiene la URL de las imagenes
+                    console.log(await handleFiles(arrayImages[index]));
+                    arrayURL.push(await handleFiles(arrayImages[index])); //Problema con peticion
+                }
+
+            }
+            //Muestra mensaje de error por algunos campos vacios 
+            if (element.value == "" || element.value == null){
+                return console.error(`Campo ${idInput} se encuentra vacio`)        
+            }  
+        }
+
+    if (idInput == "images"){
+
+        console.log(arrayURL);
+        data[`${idInput}`] = `${arrayURL}`;
+
+    }else{
+
+        data[`${idInput}`] = `${element.value}`
+
     }
-    data[`${idInput}`] = `${element.value}`
+        
 });
     console.log(data);
-    
 }
 
-export function handleFiles() {
-    const files = document.getElementById('images').value;
-    console.log(files)
+// export  function handleFiles(file) {
+//         var formData = new FormData();
+//         formData.append('file', file);
+//         formData.append('upload_preset', 'dijp8oem'); // Debes configurar un upload preset en Cloudinary
     
+//         fetch('https://api.cloudinary.com/v1_1/dq59qbt6y/image/upload', {
+//             method: 'POST',
+//             body: formData
+//         })
+//             .then(response => response.json())
+//             .then(data => {
+//                 //console.log(data.secure_url); // Aquí obtienes la respuesta de Cloudinary, incluyendo la URL de la imagen
+//                 return  data.secure_url;
+//             })
+//             .catch(error => {
+//                 console.error('Error:', error);
+//             });
+// }
 
+export async function handleFiles(file) {
+    try {
+        const formData = new FormData();
+        formData.append('file', file);
+        formData.append('upload_preset', 'dijp8oem'); // Debes configurar un upload preset en Cloudinary
 
-    
+        const response = await fetch('https://api.cloudinary.com/v1_1/dq59qbt6y/image/upload', {
+            method: 'POST',
+            body: formData
+        });
+
+        const data = await response.json();
+        console.log(await data.secure_url); // Aquí obtienes la respuesta de Cloudinary, incluyendo la URL de la imagen
+        return  data.secure_url;
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
-

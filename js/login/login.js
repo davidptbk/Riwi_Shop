@@ -25,8 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 });
 
-
-
 //Functions
 function insertRegister() {
   // insert.textContent = ""
@@ -209,6 +207,6 @@ async function addUser(inputsRegister) {
   if (await validatorSignUp(inputsRegister)) {
     delete dataInputs["confirmPassword"];
     post(URL_Users, dataInputs);
-    window.location.href = "../LandingPage.html"
+    window.location.href = "../../LandingPage.html"
   }
 }

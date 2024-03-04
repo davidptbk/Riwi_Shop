@@ -62,6 +62,7 @@
 
 .tex-fot h1 {
     font-size: 4em;
+    -webkit-text-stroke: 1px black;
     
 }
 
