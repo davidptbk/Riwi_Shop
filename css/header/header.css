@@ -277,9 +277,11 @@ header {
 }
 
 .menu-horizontal{
-    list-style: none;
     display: flex;
     justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .menu-horizontal > li > a{
@@ -303,21 +305,22 @@ header {
 
 .menu-vertical li a{
     display: block;
-    color: white;
+    color: #6B5CFF;
     padding: 5px 0px 5px 0px;
 } 
 
 .menu-vertical{
     border: 1px solid black;
     border-radius: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .menu-vertical li a:hover{
-    color: white;
+    color: #6B5CFF;
 }
 
 .menu-vertical li:hover{
-    background-color: rgba(234, 162, 252, 0.582);
+    background-color: rgb(40, 50, 128);
 }
 
 .Meta-aRF{
@@ -328,4 +331,21 @@ header {
 header, .head-v-top {
     position: relative; 
     z-index: 100;
+}
+
+.menu-vertical {
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+.menu-vertical > li a:before {
+    content: "\271A"; 
+    padding-right: 8px;
+    color: rgba(234, 162, 252, 0.582);
+}
+
+.menu-vertical {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    border: 1px solid black;
 }
